@@ -1,0 +1,3 @@
+[submodule "root/Framework"]
+	path = root/Framework
+	url = git@github.com:blank-org/cutie-framework
