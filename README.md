@@ -1,4 +1,4 @@
-Cutie - Website
+Avyaan Technologies - Website
 ==============
 
 Requirements:
@@ -19,4 +19,3 @@ CSS
 	dev
 		'Base' is embedded
 		rest all are linked
-	
