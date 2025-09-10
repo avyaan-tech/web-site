@@ -2,7 +2,7 @@
 	<div id='header-title'>
 		<div id='header-slogan' class='XURL' data-target='root' data-title=''>
 			<a id='header-slogan-href' href='/'>
-				<div id='header-slogan-text'>_</div>
+				<div id='header-slogan-text'>innovation . ai . impact</div>
 			</a>
 		</div>
 		<div id='header-logo' class='XURL' data-target='root' data-title=''>

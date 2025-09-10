@@ -1,0 +1,245 @@
+body {
+    background: linear-gradient(180deg, #071028 0%, #071426 40%, #041222 100%);
+}
+
+.avyaan-landing {
+    font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: #E6F0FF
+}
+
+.avyaan-wrap {
+    min-height: 72vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #071028 0%, #071426 40%, #041222 100%);
+    position: relative;
+    overflow: hidden
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 1100px;
+    width: 100%
+}
+
+.hero {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center
+}
+
+.hero-left {
+    flex: 1
+}
+
+#hero-title {
+    color: #e8e6e3;
+}
+
+.logo-badge {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
+    color: #012;
+    font-weight: 700
+}
+
+h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+    margin: 0 0 .5rem 0;
+    line-height: 1.02;
+    color: #F8FBFF
+}
+
+p.lead {
+    color: #bcd5ff;
+    margin: 0 0 1rem 0;
+    font-size: 1.03rem
+}
+
+.cta-row {
+    display: flex;
+    gap: .75rem;
+    align-items: center
+}
+
+.btn {
+    background: #00b3ff;
+    padding: .7rem 1.1rem;
+    border-radius: 10px;
+    color: #021226;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(2, 38, 60, .35);
+    transition: transform .15s ease, box-shadow .15s ease
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: #cfe9ff
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    color: #99bfe8;
+    font-size: .95rem;
+    margin-top: .5rem
+}
+
+/* Feature cards (max 3 per row) */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 12px
+}
+
+.card h3 {
+    margin: .15rem 0 .5rem 0;
+    font-size: 1.05rem
+}
+
+.card p {
+    margin: 0;
+    color: #bcd8ff
+}
+
+/* Product preview card (externalized from inline styles) */
+.preview-card {
+    width: 320px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.preview-card .preview-label {
+    font-size: .95rem;
+    color: #9fd3ff;
+    margin-bottom: .35rem;
+}
+
+.preview-card .preview-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: .45rem;
+}
+
+.preview-card .preview-desc {
+    font-size: .9rem;
+    color: #cfe9ff;
+}
+
+/* Contact CTA (externalized from inline styles) */
+.contact-cta {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(0,179,255,0.06), rgba(0,179,255,0.02));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-cta-title {
+    display: block;
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+.contact-cta-sub {
+    color: #9fc6ff;
+}
+
+.contact-cta-actions {
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+}
+
+.noscript-warning {
+    color: #ffbdbd;
+}
+
+/* Stats bar — now re-using feature tiles (max 3 per row) */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: stretch
+}
+
+.stat {
+    padding: 0;
+    text-align: center
+}
+
+.stat b {
+    display: block;
+    font-size: 1.4rem;
+    color: #fff
+}
+
+.stat span {
+    display: block;
+    color: #9fc6ff;
+    font-size: .9rem
+}
+
+/* Subtle animated lines */
+.bg-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .7
+}
+
+.pulse {
+    animation: pulse 3.6s ease-in-out infinite
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(0) scale(1)
+    }
+
+    50% {
+        transform: translateY(-6px) scale(1.02)
+    }
+
+    100% {
+        transform: translateY(0) scale(1)
+    }
+}
+
+/* Responsive */
+@media (max-width:720px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .meta {
+        flex-direction: column
+    }
+}
