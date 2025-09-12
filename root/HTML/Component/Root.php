@@ -59,8 +59,8 @@
 
 			<section class="products" aria-label="Products">
 				<div class="products-intro">
-					<h2>Products</h2>
-					<p>Projects we maintain</p>
+					<h2>Our innovations</h2>
+					<p>Products by Avyaan</p>
 				</div>
 
 				<div class="products-list">

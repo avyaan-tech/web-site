@@ -6,15 +6,16 @@ site_domain	avyaan.tech
 base_url	https://avyaan.tech
 version	1.0.0
 author	Avyaan Technologies
-twitter_owner	_
-twitter_author	_
-fb_version	
+twitter_owner	avyaantech
+twitter_author	avyaantech
+fb_version	3.0
 fb_appId	_
-fb_admins	_
+fb_admins	100000014591845
 google_analytics_id	UA-_-_
 google_cse_id	_
-sentry_key	_
-sentry_id	_
-sentry_version	_
-sentry_hash	_
-google_adsense_ad_client	_
+sentry_key	2dec1f01490b7cc437bafc1ebe80e0be
+sentry_n	85995
+sentry_id	4510005443821568
+sentry_version	8.8.0
+sentry_hash	sha384-3xNfdcTUrviKOLzYGFielxgKX/Szl/FWt+1HcgMkoseZuknvqFNB5wIhoyZl9Qy0
+google_tag_id	G-WBS94NKRN4

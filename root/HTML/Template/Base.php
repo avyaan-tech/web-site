@@ -13,7 +13,6 @@
 	<?php require '../HTML/Fragment/Twitter_meta.php' ?>
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
-	<link rel='manifest' href='/manifest.json' >
 	<link href="<?php echo $config['base_url']; if($id != 'root') echo '/'.$id ?>" rel='canonical' >
 	<title><?php echo $desc.' - '.$config['project_title']; ?></title>
 <?php if($bPublish) {
