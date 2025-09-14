@@ -17,9 +17,9 @@
 
 			<div class="hero" id="hero">
 				<div class="hero-left">
-					<h1 id="hero-title">Human-centered Tech. Engineered for scale</h1>
+					<h1 id="hero-title"><span class="hero-line">Human-centered Tech.</span><span class="hero-line">Engineered for scale</span></h1>
 					<p class="lead">
-						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise
+						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise.
 						<br>Minimal overhead, maximum precision & impact
 					</p>
 
@@ -78,7 +78,7 @@
 					</a>
 
 					<!-- Card: wolo -->
-					<a class="product-card" href="https://wolo.codes" title="wolo.codes" target="_blank" rel="noopener noreferrer">
+					<a class="product-card" href="https://wolo.codes/about" title="wolo.codes" target="_blank" rel="noopener noreferrer">
 					<div id='product-wolo' class="card-logo">
 						<?php require '../../Resource/wolo_logo-full.svg' ?>
 					</div>

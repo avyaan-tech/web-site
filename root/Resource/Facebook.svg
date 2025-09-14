@@ -1,9 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="logo_fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 76 76" enable-background="new 0 0 76 76" xml:space="preserve">
-<path id="Blue_1_" fill="#D9D9D9" d="M68.7,3.5H7.3c-2.1,0-3.8,1.7-3.8,3.8v61.4c0,2.1,1.7,3.8,3.8,3.8h33V45.8h-9V35.4h9v-7.7
-	c0-8.9,5.4-13.8,13.4-13.8c3.8,0,7.1,0.3,8,0.4v9.3l-5.5,0c-4.3,0-5.2,2.1-5.2,5.1v6.6h10.3l-1.3,10.4h-9v26.7h17.6
-	c2.1,0,3.8-1.7,3.8-3.8V7.3C72.5,5.2,70.8,3.5,68.7,3.5z"/>
+
+<svg
+   version="1.1"
+   id="logo_fb"
+   x="0px"
+   y="0px"
+   viewBox="0 0 26 26"
+   enable-background="new 0 0 76 76"
+   xml:space="preserve"
+   sodipodi:docname="Facebook.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   width="26"
+   height="26"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs1" /><sodipodi:namedview
+   id="namedview1"
+   pagecolor="#505050"
+   bordercolor="#eeeeee"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="47.763158"
+   inkscape:cx="16.414325"
+   inkscape:cy="13.053994"
+   inkscape:window-width="3840"
+   inkscape:window-height="2054"
+   inkscape:window-x="-11"
+   inkscape:window-y="-11"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="logo_fb" />
+<path
+   id="rect1"
+   style="fill:#ffffff;stroke-width:0.0952787"
+   d="m 2.0920299,0.65527735 c -0.7716075,0 -1.39230323,0.62137965 -1.39230323,1.39298695 V 23.951735 c 0,0.771609 0.62069573,1.392988 1.39230323,1.392988 H 23.907969 c 0.771609,0 1.392304,-0.621379 1.392304,-1.392988 V 2.0482643 c 0,-0.7716073 -0.620695,-1.39298695 -1.392304,-1.39298695 z M 2.2677773,0.9206082 H 23.765731 c 0.735268,0 1.33021,0.59549 1.295198,1.3307573 V 23.71376 c 0,0.735268 -0.594807,1.330757 -1.330074,1.330757 h -6.162104 v -9.348809 h 3.151145 l 0.454755,-3.640776 h -3.6059 V 9.7435427 c 0,-1.0503817 0.314842,-1.7855126 1.820389,-1.7855126 h 1.925698 V 4.7022566 C 20.999726,4.6672432 19.844306,4.562069 18.513822,4.562069 c -2.80102,0 -4.691845,1.7152137 -4.691845,4.8313465 v 2.6963915 h -3.151145 v 3.641459 h 3.151145 v 9.348127 H 2.2677773 c -0.7352673,0 -1.33007349,-0.59549 -1.33007349,-1.330757 V 2.2513655 c 0,-0.7352673 0.59480619,-1.3307573 1.33007349,-1.3307573 z" />
 </svg>

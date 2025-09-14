@@ -22,6 +22,11 @@
 	align-items: start;
 }
 
+/* Hero line wrapper: inline by default (no break on wide screens), block on small screens */
+#hero-title .hero-line { display: inline; margin: 0; }
+/* Add a small visible gap between inline hero-line spans on wide screens */
+#hero-title .hero-line + .hero-line { margin-left: .45ch; }
+
 /* Primary selector: style anchors with class .product */
 .products-list .product {
 	display: flex;

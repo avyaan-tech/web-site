@@ -1,0 +1,210 @@
+@media (max-width:720px) {
+    #hero-title .hero-line {
+        display: block;
+    }
+
+    #hero-title .hero-line+.hero-line {
+        margin-top: .15rem;
+        margin-left: 0;
+    }
+    
+}
+
+/* Additional mobile refinements */
+@media (max-width:720px) {
+
+    /* Tighten overall spacing */
+    .avyaan-wrap .grid {
+        gap: 0.6rem;
+    }
+
+    /* Hero adjustments */
+    .hero-left h1#hero-title {
+        font-size: 1.6rem;
+        line-height: 1.15;
+        margin-bottom: .4rem;
+        max-width: 36ch;
+    }
+
+    .hero-left p.lead {
+        font-size: 0.95rem;
+        margin-bottom: .6rem;
+    }
+
+    .cta-row .btn {
+        padding: .55rem .9rem;
+        font-size: 0.95rem;
+    }
+
+    /* Add vertical breathing room around the CTA on narrow screens */
+    .cta-row { padding-top: 1.6rem; padding-bottom: 1.1rem; }
+
+    /* Center CTA and trusted meta on small screens */
+    .cta-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .meta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: .6rem;
+    }
+
+    /* Feature cards - stack and smaller text */
+    .features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .7rem;
+    }
+
+    .features .card {
+        padding: .75rem;
+        border-radius: 10px;
+    }
+
+    .features .card h3 {
+        font-size: 1.05rem;
+    }
+
+    .features .card p {
+        font-size: .95rem;
+    }
+
+    /* Products list - compact */
+    .products {
+        margin-top: 1.2rem;
+    }
+
+    .products .products-intro h2 {
+        font-size: 1.15rem;
+    }
+
+    .products .products-intro p {
+        font-size: .9rem;
+    }
+
+    .products-list {
+        gap: .6rem;
+    }
+
+    .products-list .product-card,
+    .products-list .product {
+        padding: .75rem;
+        border-radius: 10px;
+    }
+
+    .card-logo svg,
+    .products-list .product svg {
+        width: 64px;
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .product-description {
+        font-size: .9rem;
+    }
+
+    /* Contact CTA */
+    .contact-cta {
+        padding: .8rem;
+        gap: .5rem;
+    }
+
+    .contact-cta-title {
+        font-size: 1.05rem;
+    }
+
+    .contact-cta-sub {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width:420px) {
+
+    /* Further reduce sizes for small phones */
+    .avyaan-wrap {
+        padding-left: .6rem;
+        padding-right: .6rem;
+    }
+
+    .hero-left h1#hero-title {
+        font-size: 1.2rem;
+        max-width: 28ch;
+    }
+
+    .hero-left p.lead {
+        font-size: .88rem;
+    }
+
+    .cta-row .btn {
+        padding: .45rem .75rem;
+        font-size: .9rem;
+    }
+
+    /* Ensure CTA and trusted text remain centered on very small screens */
+    .cta-row {
+        justify-content: center;
+    }
+
+    .meta {
+        justify-content: center;
+    }
+
+    .features .card h3 {
+        font-size: .95rem;
+    }
+
+    .features .card p {
+        font-size: .88rem;
+    }
+
+    .products .products-intro h2 {
+        font-size: 1rem;
+    }
+
+    .products .products-intro p {
+        font-size: .82rem;
+    }
+
+    .card-logo svg,
+    .products-list .product svg {
+        width: 52px;
+    }
+
+    .product-name {
+        font-size: .95rem;
+    }
+
+    .product-description {
+        font-size: .82rem;
+    }
+
+    /* Reduce gaps and shadows to keep things tight */
+    .products-list,
+    .features {
+        gap: .5rem;
+    }
+
+    .products-list .product-card,
+    .products-list .product,
+    .features .card {
+        padding: .6rem;
+        box-shadow: none;
+    }
+
+    /* Make meta and trusted text smaller */
+    .meta,
+    .meta div {
+        font-size: .85rem;
+    }
+
+    .noscript-warning {
+        font-size: .78rem;
+    }
+}
