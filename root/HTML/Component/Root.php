@@ -120,7 +120,7 @@
 
 			<section id="contact-cta" class="contact-cta">
 				<div>
-					<strong class="contact-cta-title">Let's build the future - Now</strong>
+					<strong class="contact-cta-title">Let's build the future — Now</strong>
 					<span class="contact-cta-sub">Tell us about your vision — we'll propose a pragmatic plan</span>
 				</div>
 				<div class="contact-cta-actions">
