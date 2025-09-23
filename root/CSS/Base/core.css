@@ -112,12 +112,55 @@ p.lead {
 
 .card h3 {
     margin: .15rem 0 .5rem 0;
-    font-size: 1.05rem
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(0, 179, 255, 0.08);
+    color: #7fd0ff;
+    flex-shrink: 0;
+}
+
+.card-icon svg {
+    width: 18px;
+    height: 18px;
 }
 
 .card p {
     margin: 0;
     color: #bcd8ff
+}
+
+.products-intro h2 {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 179, 255, 0.1);
+    color: #8bd8ff;
+    flex-shrink: 0;
+}
+
+.section-icon svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Product preview card (externalized from inline styles) */

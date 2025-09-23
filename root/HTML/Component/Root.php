@@ -35,31 +35,56 @@
 
 			<section class="features" aria-label="Capabilities">
 				<div class="card" data-category="outcome" data-tags="efficiency,ops,scale">
-					<h3>Workflow Automation</h3>
-					<p>Remove repetitive steps across sales, ops, and support—keep humans in the loop where it counts</p>
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'workflow_gear'); ?></span>
+						Workflow Automation
+					</h3>
+					<p>Eliminate repetitive tasks across sales, operations, and support — while keeping humans in control where it matters most</p>
 				</div>
 				<div class="card" data-category="outcome" data-tags="growth,product,experience">
-					<h3>Customer Experience</h3>
-					<p>Faster responses, consistent service, and multilingual UX to lift conversion and retention</p>
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'customer_chat'); ?></span>
+						Customer Experience
+					</h3>
+					<p>Deliver faster responses, consistent service, and multilingual experiences that boost conversion and retention</p>
 				</div>
 				<div class="card" data-category="outcome" data-tags="insights,analytics,leadership">
-					<h3>Intelligence & Insights</h3>
-					<p>Answers over dashboards—search, summarize, and act on your data in one place</p>
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'insights_bulb'); ?></span>
+						Intelligence & Insights
+					</h3>
+					<p>Go beyond dashboards — search, summarize, and act on your data in a unified interface</p>
 				</div>
 				<div class="card" data-category="platform" data-tags="data,pipelines,storage,scale">
-					<h3>Data Platform & Pipelines</h3>
-					<p>Clean schemas, streaming pipelines, and object storage that keep data trustworthy and usable</p>
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'data_platform'); ?></span>
+						Data Platform & Pipelines
+					</h3>
+					<p>Design clean schemas, streaming pipelines, and reliable object storage to keep data accurate and actionable</p>
 				</div>
 				<div class="card" data-category="platform" data-tags="cloud,devops,kubernetes,delivery">
-					<h3>Cloud Infra & Delivery</h3>
-					<p>Containerized apps, autoscaling, and CI/CD so teams can ship fast without surprises</p>
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'cloud_infra'); ?></span>
+						Cloud Infra & Delivery
+					</h3>
+					<p>Deploy containerized applications with autoscaling and CI/CD pipelines so teams can ship faster and with fewer surprises</p>
+				</div>
+				<div class="card" data-category="build" data-tags="web,mobile,embedded,development">
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'app_development'); ?></span>
+						App & Soluntion Development
+					</h3>
+					<p>Engineer cross-platform web, mobile, and embedded solutions — designed end-to-end to solve real world challenges</p>
 				</div>
 			</section>
 
 
 			<section class="products" aria-label="Products">
 				<div class="products-intro">
-					<h2>Our innovations</h2>
+					<h2>
+						<span class="section-icon" aria-hidden="true"><?php includeSVG('Icon', 'innovation_star'); ?></span>
+						Our innovations
+					</h2>
 					<p>Products by Avyaan</p>
 				</div>
 

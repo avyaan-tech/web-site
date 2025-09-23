@@ -68,6 +68,17 @@
 
     .features .card h3 {
         font-size: 1.05rem;
+        gap: .5rem;
+    }
+
+    .features .card .card-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .features .card .card-icon svg {
+        width: 16px;
+        height: 16px;
     }
 
     .features .card p {
@@ -81,6 +92,18 @@
 
     .products .products-intro h2 {
         font-size: 1.15rem;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .products .products-intro .section-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .products .products-intro .section-icon svg {
+        width: 18px;
+        height: 18px;
     }
 
     .products .products-intro p {
