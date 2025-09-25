@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="hero-center">
-				<img src='/root.png' alt="">
+				<img src='/hero.png' alt="">
 			</div>
 
 			<section class="features" aria-label="Capabilities">
