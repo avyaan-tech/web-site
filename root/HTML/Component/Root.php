@@ -19,12 +19,13 @@
 				<div class="hero-left">
 					<h1 id="hero-title"><span class="hero-line">Human-centered Tech.</span><span class="hero-line">Engineered for scale</span></h1>
 					<p class="lead">
-						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise.
+						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable - without the noise.
 						<br>Minimal overhead, maximum precision & impact
 					</p>
 
 					<div class="cta-row">
 						<button class="btn" data-scroll-target="contact-cta">Start a conversation</button>
+
 					</div>
 
 					<div class="meta">
@@ -36,13 +37,22 @@
 				<img src='/hero.png' alt="">
 			</div>
 
+			<section class="profile-summary" aria-label="Company overview">
+				<div class="summary-body">
+					<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
+					<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
+				</div>
+			</section>
+
+			<h2>Core Capabilities</h2>
+
 			<section class="features" aria-label="Capabilities">
 				<div class="card" data-category="outcome" data-tags="efficiency,ops,scale">
 					<h3>
 						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'workflow_gear'); ?></span>
 						Workflow Automation
 					</h3>
-					<p>Eliminate repetitive tasks across sales, operations, and support — while keeping humans in control where it matters most</p>
+					<p>Eliminate repetitive tasks across sales, operations, and support - while keeping humans in control where it matters most</p>
 				</div>
 				<div class="card" data-category="outcome" data-tags="growth,product,experience">
 					<h3>
@@ -56,7 +66,7 @@
 						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'insights_bulb'); ?></span>
 						Intelligence & Insights
 					</h3>
-					<p>Go beyond dashboards — search, summarize, and act on your data in a unified interface</p>
+					<p>Go beyond dashboards - search, summarize, and act on your data in a unified interface</p>
 				</div>
 				<div class="card" data-category="platform" data-tags="data,pipelines,storage,scale">
 					<h3>
@@ -77,64 +87,30 @@
 						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'app_development'); ?></span>
 						App & Soluntion Development
 					</h3>
-					<p>Engineer cross-platform web, mobile, and embedded solutions — designed end-to-end to solve real world challenges</p>
-				</div>
-			</section>
-
-
-			<section class="products" aria-label="Products">
-				<div class="products-intro">
-					<h2>
-						<span class="section-icon" aria-hidden="true"><?php includeSVG('Icon', 'innovation_star'); ?></span>
-						Our innovations
-					</h2>
-					<p>Products by Avyaan</p>
-				</div>
-
-				<div class="products-list">
-					<!-- Card: wcodes -->
-					<a class="product-card" href="https://wcodes.org" title="wcodes.org" target="_blank" rel="noopener noreferrer">
-					<div id='product-wcode' class="card-logo">
-						<?php require '../../Resource/wcode_logo-full.svg' ?>
-					</div>
-					<div class="card-body">
-						<span class="product-name">wcodes.org</span>
-						<p class="product-description">
-							A word-based encoding system that converts digital data into simple, human-readable words for seamless, error-free manual exchange
-						</p>
-					</div>
-					</a>
-
-					<!-- Card: wolo -->
-					<a class="product-card" href="https://wolo.codes/about" title="wolo.codes" target="_blank" rel="noopener noreferrer">
-					<div id='product-wolo' class="card-logo">
-						<?php require '../../Resource/wolo_logo-full.svg' ?>
-					</div>
-					<div class="card-body">
-						<span class="product-name">wolo.codes</span>
-						<p class="product-description">
-							A word-based addressing system that transforms precise locations into three simple, memorable words for effortless sharing and navigation
-						</p>
-					</div>
-					</a>
+					<p>Engineer cross-platform web, mobile, and embedded solutions - designed end-to-end to solve real world challenges</p>
 				</div>
 			</section>
 
 
 			<section id="contact-cta" class="contact-cta">
 				<div>
-					<strong class="contact-cta-title">Let's build the future — Now</strong>
-					<span class="contact-cta-sub">Tell us about your vision — we'll propose a pragmatic plan</span>
+					<strong class="contact-cta-title">Let's build the future - Now</strong>
+					<span class="contact-cta-sub">Tell us about your vision - we'll propose a pragmatic plan</span>
 				</div>
 				<div class="contact-cta-actions">
 					<button class="btn" onclick="location.href='mailto:ujjwal@avyaan.tech'">Contact us</button>
+					<a class="btn ghost" href="/portfolio">Portfolio</a>
 				</div>
 			</section>
 
-			<noscript class="noscript-warning">For best experience enable JavaScript — we progressively enhance the page with subtle interactions</noscript>
+			<noscript class="noscript-warning">For best experience enable JavaScript - we progressively enhance the page with subtle interactions</noscript>
 
 		</div>
 
 	</div>
 
 </main>
+
+
+
+

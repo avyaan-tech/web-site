@@ -53,101 +53,100 @@
                     <p>LangChain, LlamaIndex, Hugging Face, OCR/ICR/OMR pipelines, RAG agents, AI chatbots</p>
                 </article>
                 <article class="skill-card">
-                    <h3>DevOps & Security</h3>
-                    <p>Docker, Kubernetes, GitHub Actions, Serverless Framework, NFC & cryptographic auth</p>
+                    <h3>DevOps</h3>
+                    <p>Docker, Kubernetes, GitHub Actions, Serverless Framework, automated CI/CD pipelines</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Security & Identity</h3>
+                    <p>NFC, NXP Mifare DESFire, Digital Signatures, Cryptographic Hashing, secure authentication</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Algorithm Design</h3>
+                    <p>Custom algorithms for word-based encoding, location addressing</p>
                 </article>
             </section>
 
             <section class="portfolio-showcase" aria-label="Portfolio case studies">
-                <article class="portfolio-case" data-tags="automation,operations">
+                <article class="portfolio-case" data-tags="ai,delivery">
                     <div class="case-media" aria-hidden="true">
                         <span class="case-icon"><?php includeSVG('Icon', 'workflow_gear'); ?></span>
                     </div>
                     <div class="case-content">
-                        <h3>Intelligent Ops Hub</h3>
-                        <p>Unified ticket triage and SLA monitoring across five global support teams with automation that cut response time by 38%.</p>
+                        <h3>Delivery Stack</h3>
+                        <p>Designed and deployed Python microservices on Kubernetes with automated CI/CD pipelines so multidisciplinary squads could ship developed capabilities reliably.</p>
                     </div>
                 </article>
-                <article class="portfolio-case" data-tags="customer,experience">
-                    <div class="case-media" aria-hidden="true">
-                        <span class="case-icon"><?php includeSVG('Icon', 'customer_chat'); ?></span>
-                    </div>
-                    <div class="case-content">
-                        <h3>Conversational CX Platform</h3>
-                        <p>Designed multilingual virtual agents and agent assist workflows, boosting NPS by 22 points within the first quarter.</p>
-                    </div>
-                </article>
-                <article class="portfolio-case" data-tags="data,insights">
-                    <div class="case-media" aria-hidden="true">
-                        <span class="case-icon"><?php includeSVG('Icon', 'insights_bulb'); ?></span>
-                    </div>
-                    <div class="case-content">
-                        <h3>Analytics Fabric</h3>
-                        <p>Implemented governed data pipelines and self-service dashboards so leadership could act on trusted, near real-time insights.</p>
-                    </div>
-                </article>
-                <article class="portfolio-case" data-tags="platform,scale">
-                    <div class="case-media" aria-hidden="true">
-                        <span class="case-icon"><?php includeSVG('Icon', 'cloud_infra'); ?></span>
-                    </div>
-                    <div class="case-content">
-                        <h3>Elastic Delivery Platform</h3>
-                        <p>Migrated monolithic workloads into containerized services with automated delivery pipelines, reducing release time by 60%.</p>
-                    </div>
-                </article>
-                <article class="portfolio-case" data-tags="product,design">
-                    <div class="case-media" aria-hidden="true">
-                        <span class="case-icon"><?php includeSVG('Icon', 'app_development'); ?></span>
-                    </div>
-                    <div class="case-content">
-                        <h3>Field Enablement Suite</h3>
-                        <p>Shipped cross-platform mobile tools that empowered on-site teams with offline-first capabilities and guided workflows.</p>
-                    </div>
-                </article>
-                <article class="portfolio-case" data-tags="data,security">
+                <!-- digital evaluation -->
+                <artical class="portfolio-case" data-tags="ai,ocr">
                     <div class="case-media" aria-hidden="true">
                         <span class="case-icon"><?php includeSVG('Icon', 'data_platform'); ?></span>
                     </div>
                     <div class="case-content">
-                        <h3>Secure Data Exchange</h3>
-                        <p>Delivered encrypted data-sharing pipelines with automated compliance checks for sensitive partner integrations.</p>
+                        <h3>Digital Evaluation Platform</h3>
+                        <p>Built OCR, ICR, and OMR pipelines using OpenCV, AWS Textract and AWS Lambda to automate answersheet evaluation processing.</p>
+                    </div>
+                </artical>
+                <article class="portfolio-case" data-tags="ai,ocr">
+                    <div class="case-media" aria-hidden="true">
+                        <span class="case-icon"><?php includeSVG('Icon', 'customer_chat'); ?></span>
+                    </div>
+                    <div class="case-content">
+                        <h3>AI Evaluation Platform</h3>
+                        <p>Built AI answersheet evaluation pipelines using LangChain, Hugging Face, and AWS Lambda to automate handwritten answersheet evaluationx.</p>
                     </div>
                 </article>
-            </section>
-
-            <section class="products innovations" aria-label="Flagship products">
-                <div class="products-intro">
-                    <h2>Flagship Innovations</h2>
-                    <p>Product lines conceived, engineered, and scaled by Avyaan</p>
-                </div>
-                <div class="products-list">
-                    <a class="product-card" href="https://wcodes.org" title="wcodes.org" target="_blank" rel="noopener noreferrer">
-                        <div class="card-logo">
+                <article class="portfolio-case" data-tags="education,rag">
+                    <div class="case-media" aria-hidden="true">
+                        <span class="case-icon"><?php includeSVG('Icon', 'insights_bulb'); ?></span>
+                    </div>
+                    <div class="case-content">
+                        <h3>EdTech Platform</h3>
+                        <p>Defined modular architecture, orchestrated containerised services on AWS, and implemented RAG-powered search with access controls.</p>
+                    </div>
+                </article>
+                <article class="portfolio-case" data-tags="quality,automation">
+                    <div class="case-media" aria-hidden="true">
+                        <span class="case-icon"><?php includeSVG('Icon', 'cloud_infra'); ?></span>
+                    </div>
+                    <div class="case-content">
+                        <h3>AI Test Automation Suite</h3>
+                        <p>Guided test automation firm on integrating ML-assisted review workflows, Dockerised services, and GitHub-based checks for AI-driven testing.</p>
+                    </div>
+                </article>
+                <article class="portfolio-case" data-tags="security,innovation">
+                    <div class="case-media" aria-hidden="true">
+                        <div class="case-icon external-icon">
                             <?php require '../../Resource/wcode_logo-full.svg' ?>
                         </div>
-                        <div class="card-body">
-                            <span class="product-name">wcodes.org</span>
-                            <p class="product-description">A secure, human-readable encoding system that simplifies data exchange without sacrificing cryptographic rigour.</p>
+                    </div>
+                    <div class="case-content">
+                        <h3>WCode Platform</h3>
+                        <p>Word-based encoding and secure data exchange workflows published at wcodes.org, pairing human readability with cryptographic rigour.</p>
+                        <div class="case-links">
+                            <a class="case-link" href="https://wcodes.org" target="_blank" rel="noopener noreferrer">wcodes.org<span class="external-indicator" aria-hidden="true"><svg viewBox="0 0 12 12" focusable="false"><path d="M4.5 2H10v5.5H8.5V4.81L4.06 9.25 2.75 7.94 7.19 3.5H4.5V2z" fill="currentColor"/></svg></span></a>
                         </div>
-                    </a>
-                    <a class="product-card" href="https://wolo.codes/about" title="wolo.codes" target="_blank" rel="noopener noreferrer">
-                        <div class="card-logo">
+                    </div>
+                </article>
+                <article class="portfolio-case" data-tags="product,addressing">
+                    <div class="case-media" aria-hidden="true">
+                        <div class="case-icon external-icon">
                             <?php require '../../Resource/wolo_logo-full.svg' ?>
+                        </div>                    </div>
+                    <div class="case-content">
+                        <h3>Wolo Code</h3>
+                        <p>Three-word addressing platform spanning Android, web, and cloud tooling so locations stay precise yet human friendly.</p>
+                        <div class="case-links">
+                            <a class="case-link" href="https://wolo.codes/about" target="_blank" rel="noopener noreferrer">wolo.codes<span class="external-indicator" aria-hidden="true"><svg viewBox="0 0 12 12" focusable="false"><path d="M4.5 2H10v5.5H8.5V4.81L4.06 9.25 2.75 7.94 7.19 3.5H4.5V2z" fill="currentColor"/></svg></span></a>
                         </div>
-                        <div class="card-body">
-                            <span class="product-name">wolo.codes</span>
-                            <p class="product-description">A word-based addressing system that turns precise locations into three memorable words for instant sharing and navigation.</p>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </article>
             </section>
 
             <section class="profile-grid" aria-label="Background">
                 <article class="bio-card">
                     <h3>Recognitions</h3>
                     <ul>
-                        <li>2018 - Prior art acknowledgement for word-based location codes (Patent WO2014170646A1)</li>
-                        <li>2014 - BI portal upgrades and marketing automation milestone</li>
+                        <li>2018 - Prior art acknowledgement for word-based location codes (Patent WO2014170646A1) &mdash; Ujjwal Singh</li>
                     </ul>
                 </article>
             </section>

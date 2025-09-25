@@ -7,8 +7,9 @@
 		<div class='sidebar-nav-li sidebar-sub'>
 			<?php
 			$MENU_MAX_ITEM_COUNT = -5;
-			group_image($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ['root', '']);
+			group_image($SIDEBAR_NAV_GROUP, $MENU_MAX_ITEM_COUNT, ['root', ''], ['portfolio', 'Portfolio']);
 			?>
 		</div>
 	</div>
 </div>
+
