@@ -32,6 +32,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="hero-center">
+				<img src='/root.png' alt="">
+			</div>
 
 			<section class="features" aria-label="Capabilities">
 				<div class="card" data-category="outcome" data-tags="efficiency,ops,scale">
