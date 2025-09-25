@@ -19,7 +19,7 @@ body {
 .grid {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 2.5rem;
     max-width: 1100px;
     width: 100%
 }
@@ -43,6 +43,7 @@ body {
 .hero-center img {
     max-width: 100%;
     height: auto;
+    margin-top: 1.5rem;
 }
 
 #hero-title {
@@ -102,7 +103,7 @@ p.lead {
     gap: 1rem;
     color: #99bfe8;
     font-size: .95rem;
-    margin-top: .5rem
+    margin-top: 2rem
 }
 
 /* Feature cards (max 3 per row) */
@@ -301,3 +302,6 @@ p.lead {
         margin-top: 1.5rem;
     }
 }
+
+
+
