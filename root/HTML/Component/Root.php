@@ -17,7 +17,7 @@
 
 			<div class="hero" id="hero">
 				<div class="hero-left">
-					<h1 id="hero-title"><span class="hero-line">Human-centered Tech.</span><span class="hero-line">Engineered for scale</span></h1>
+					<h2 id="hero-title"><span class="hero-line">Human-centered Tech.</span><span class="hero-line">Engineered for scale</span></h2>
 					<p class="lead">
 						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable - without the noise.
 						<br>Minimal overhead, maximum precision & impact
@@ -44,7 +44,7 @@
 				</div>
 			</section>
 
-			<h2>Core Capabilities</h2>
+			<h3>Core Capabilities</h3>
 
 			<section class="features" aria-label="Capabilities">
 				<div class="card" data-category="outcome" data-tags="efficiency,ops,scale">

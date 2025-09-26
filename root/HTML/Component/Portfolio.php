@@ -20,7 +20,7 @@
 
             <header class="hero" id="portfolio-hero">
                 <div class="hero-left">
-                    <h1 id="portfolio-title"><span class="hero-line">Work that delivers.</span><span class="hero-line">Results that create an impact.</span></h1>
+                    <h2 id="portfolio-title"><span class="hero-line">Work that delivers.</span><span class="hero-line">Results that create an impact.</span></h2>
                     <p class="lead">
                         Selected engagements where Avyaan partnered with teams to design intelligent platforms, streamline operations, and accelerate delivery across web, mobile, data, and AI-first experiences.
                     </p>

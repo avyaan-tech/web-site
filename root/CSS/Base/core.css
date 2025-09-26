@@ -62,7 +62,7 @@ body {
 }
 
 h1 {
-    font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
     margin: 0 0 .5rem 0;
     line-height: 1.02;
     color: #F8FBFF
@@ -103,7 +103,8 @@ p.lead {
 .btn.ghost {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, .08);
-    color: #cfe9ff
+    color: #cfe9ff;
+    text-decoration: none;
 }
 
 .meta {
@@ -483,6 +484,9 @@ p.lead {
     display: flex;
     gap: .6rem;
     align-items: center;
+    margin-left: auto;
+    justify-self: end;
+    text-align: right;
 }
 
 .noscript-warning {
