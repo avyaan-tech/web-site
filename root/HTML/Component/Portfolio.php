@@ -62,7 +62,7 @@
                 </article>
                 <article class="skill-card">
                     <h3>Algorithm Design</h3>
-                    <p>Custom algorithms for word-based encoding, location addressing</p>
+                    <p>Custom algorithms like word-based encoding, location addressing, asymmetric key based software protection</p>
                 </article>
             </section>
 
@@ -73,7 +73,7 @@
                     </div>
                     <div class="case-content">
                         <h3>Delivery Stack</h3>
-                        <p>Designed and deployed Python microservices on Kubernetes with automated CI/CD pipelines so multidisciplinary squads could ship developed capabilities reliably.</p>
+                        <p>Designed and deployed Python microservices on Kubernetes with automated CI/CD pipelines so multidisciplinary squads could ship developed capabilities reliably</p>
                     </div>
                 </article>
                 <!-- digital evaluation -->
@@ -83,7 +83,7 @@
                     </div>
                     <div class="case-content">
                         <h3>Digital Evaluation Platform</h3>
-                        <p>Built OCR, ICR, and OMR pipelines using OpenCV, AWS Textract and AWS Lambda to automate answersheet evaluation processing.</p>
+                        <p>Built OCR, ICR, and OMR pipelines using OpenCV, AWS Textract and AWS Lambda to automate answersheet evaluation processing</p>
                     </div>
                 </artical>
                 <article class="portfolio-case" data-tags="ai,ocr">
@@ -92,7 +92,7 @@
                     </div>
                     <div class="case-content">
                         <h3>AI Evaluation Platform</h3>
-                        <p>Built AI answersheet evaluation pipelines using LangChain, Hugging Face, and AWS Lambda to automate handwritten answersheet evaluationx.</p>
+                        <p>Built AI answersheet evaluation pipelines using LangChain, Hugging Face, and AWS Lambda to completely automate handwritten answersheet</p>
                     </div>
                 </article>
                 <article class="portfolio-case" data-tags="education,rag">
@@ -101,7 +101,7 @@
                     </div>
                     <div class="case-content">
                         <h3>EdTech Platform</h3>
-                        <p>Defined modular architecture, orchestrated containerised services on AWS, and implemented RAG-powered search with access controls.</p>
+                        <p>Defined modular architecture, orchestrated containerised services on VPS, and implemented RAG-powered search with access controls</p>
                     </div>
                 </article>
                 <article class="portfolio-case" data-tags="quality,automation">
@@ -110,7 +110,7 @@
                     </div>
                     <div class="case-content">
                         <h3>AI Test Automation Suite</h3>
-                        <p>Guided test automation firm on integrating ML-assisted review workflows, Dockerised services, and GitHub-based checks for AI-driven testing.</p>
+                        <p>Guided test automation firm on integrating ML-assisted review workflows, Dockerised services, and GitHub-based checks for AI-driven testing</p>
                     </div>
                 </article>
                 <article class="portfolio-case" data-tags="security,innovation">
@@ -121,7 +121,7 @@
                     </div>
                     <div class="case-content">
                         <h3>WCode Platform</h3>
-                        <p>Word-based encoding and secure data exchange workflows published at wcodes.org, pairing human readability with cryptographic rigour.</p>
+                        <p>Word-based encoding and secure data exchange workflows published at wcodes.org, pairing human readability with cryptographic rigour</p>
                         <div class="case-links">
                             <a class="case-link" href="https://wcodes.org" target="_blank" rel="noopener noreferrer">wcodes.org<span class="external-indicator" aria-hidden="true"><svg viewBox="0 0 12 12" focusable="false"><path d="M4.5 2H10v5.5H8.5V4.81L4.06 9.25 2.75 7.94 7.19 3.5H4.5V2z" fill="currentColor"/></svg></span></a>
                         </div>
@@ -134,7 +134,7 @@
                         </div>                    </div>
                     <div class="case-content">
                         <h3>Wolo Code</h3>
-                        <p>Three-word addressing platform spanning Android, web, and cloud tooling so locations stay precise yet human friendly.</p>
+                        <p>Three-word addressing platform spanning Android, web, and cloud tooling so locations stay precise yet human friendly</p>
                         <div class="case-links">
                             <a class="case-link" href="https://wolo.codes/about" target="_blank" rel="noopener noreferrer">wolo.codes<span class="external-indicator" aria-hidden="true"><svg viewBox="0 0 12 12" focusable="false"><path d="M4.5 2H10v5.5H8.5V4.81L4.06 9.25 2.75 7.94 7.19 3.5H4.5V2z" fill="currentColor"/></svg></span></a>
                         </div>

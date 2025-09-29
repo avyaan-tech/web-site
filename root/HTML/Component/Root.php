@@ -40,26 +40,19 @@
 			<section class="profile-summary" aria-label="Company overview">
 				<div class="summary-body">
 					<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
-					<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
+					<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes</p>
 				</div>
 			</section>
 
 			<h3>Core Capabilities</h3>
 
 			<section class="features" aria-label="Capabilities">
-				<div class="card" data-category="outcome" data-tags="efficiency,ops,scale">
+				<div class="card" data-category="platform" data-tags="data,pipelines,storage,scale">
 					<h3>
-						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'workflow_gear'); ?></span>
-						Workflow Automation
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'data_platform'); ?></span>
+						Data Platform & Pipelines
 					</h3>
-					<p>Eliminate repetitive tasks across sales, operations, and support - while keeping humans in control where it matters most</p>
-				</div>
-				<div class="card" data-category="outcome" data-tags="growth,product,experience">
-					<h3>
-						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'customer_chat'); ?></span>
-						Customer Experience
-					</h3>
-					<p>Deliver faster responses, consistent service, and multilingual experiences that boost conversion and retention</p>
+					<p>Design clean schemas, streaming pipelines, and reliable object storage to keep data accurate and actionable</p>
 				</div>
 				<div class="card" data-category="outcome" data-tags="insights,analytics,leadership">
 					<h3>
@@ -68,12 +61,19 @@
 					</h3>
 					<p>Go beyond dashboards - search, summarize, and act on your data in a unified interface</p>
 				</div>
-				<div class="card" data-category="platform" data-tags="data,pipelines,storage,scale">
+				<div class="card" data-category="outcome" data-tags="growth,product,experience">
 					<h3>
-						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'data_platform'); ?></span>
-						Data Platform & Pipelines
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'customer_chat'); ?></span>
+						Customer Experience
 					</h3>
-					<p>Design clean schemas, streaming pipelines, and reliable object storage to keep data accurate and actionable</p>
+					<p>Deliver faster responses, consistent service, and multilingual experiences that boost conversion and retention</p>
+				</div>
+				<div class="card" data-category="outcome" data-tags="efficiency,ops,scale">
+					<h3>
+						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'workflow_gear'); ?></span>
+						Workflow Automation
+					</h3>
+					<p>Eliminate repetitive tasks across sales, operations, and support - while keeping humans in control where it matters most</p>
 				</div>
 				<div class="card" data-category="platform" data-tags="cloud,devops,kubernetes,delivery">
 					<h3>
@@ -85,7 +85,7 @@
 				<div class="card" data-category="build" data-tags="web,mobile,embedded,development">
 					<h3>
 						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'app_development'); ?></span>
-						App & Soluntion Development
+						App & Solutions Development
 					</h3>
 					<p>Engineer cross-platform web, mobile, and embedded solutions - designed end-to-end to solve real world challenges</p>
 				</div>
@@ -110,7 +110,3 @@
 	</div>
 
 </main>
-
-
-
-
