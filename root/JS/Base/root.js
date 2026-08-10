@@ -2,6 +2,7 @@
 	var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	var scrollSpyObserver = null;
 	var sectionRatios = {};
+	var scrollSpyPausedUntil = 0;
 
 	if (prefersReduced) {
 		document.querySelectorAll('.pulse').forEach(function (n) {
@@ -21,15 +22,22 @@
 		return path === '/' || path === '';
 	}
 
+	function pauseScrollSpy(ms) {
+		scrollSpyPausedUntil = Date.now() + (ms || 900);
+	}
+
 	function scrollToSection(id, behavior) {
 		var target = document.getElementById(id);
 		if (!target) return false;
 		var header = document.getElementById('header-wrapper');
 		var offset = header ? header.getBoundingClientRect().height + 16 : 16;
 		var top = target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - offset;
+		var scrollBehavior = behavior || (prefersReduced ? 'auto' : 'smooth');
+		// Keep hash/nav stable while smooth-scroll settles (spy would otherwise overwrite).
+		pauseScrollSpy(scrollBehavior === 'smooth' ? 1100 : 200);
 		window.scrollTo({
 			top: Math.max(0, top),
-			behavior: behavior || (prefersReduced ? 'auto' : 'smooth')
+			behavior: scrollBehavior
 		});
 		return true;
 	}
@@ -44,7 +52,9 @@
 		e.preventDefault();
 		scrollToSection(targetId);
 		if (window.history && window.history.replaceState) {
-			window.history.replaceState(null, '', targetId === 'hero' ? window.location.pathname : '#' + targetId);
+			var scrollUrl = targetId === 'hero' ? window.location.pathname : '#' + targetId;
+			if (typeof replaceHistoryUrl === 'function') replaceHistoryUrl(scrollUrl);
+			else window.history.replaceState(window.history.state || { id: 'root', title: '' }, '', scrollUrl);
 		}
 	});
 
@@ -58,7 +68,8 @@
 						e.stopImmediatePropagation();
 						window.__avyaanScrollSection = null;
 						if (window.history && window.history.replaceState) {
-							window.history.replaceState(null, '', window.location.pathname);
+							if (typeof replaceHistoryUrl === 'function') replaceHistoryUrl(window.location.pathname);
+							else window.history.replaceState(window.history.state || { id: 'root', title: '' }, '', window.location.pathname);
 						}
 						updateSectionNavActive('hero');
 						updateHomeNavActive(true);
@@ -80,7 +91,8 @@
 					window.__avyaanScrollSection = null;
 					if (window.history && window.history.replaceState) {
 						var hash = sectionId === 'hero' ? window.location.pathname : '#' + sectionId;
-						window.history.replaceState(null, '', hash);
+						if (typeof replaceHistoryUrl === 'function') replaceHistoryUrl(hash);
+						else window.history.replaceState(window.history.state || { id: 'root', title: '' }, '', hash);
 					}
 					updateSectionNavActive(sectionId);
 				}
@@ -218,6 +230,8 @@
 				sectionRatios[entry.target.id] = entry.isIntersecting ? entry.intersectionRatio : 0;
 			});
 
+			if (Date.now() < scrollSpyPausedUntil) return;
+
 			var bestId = null;
 			var bestRatio = 0;
 			Object.keys(sectionRatios).forEach(function (id) {
@@ -235,7 +249,9 @@
 				var nextHash = bestId === 'hero' ? '' : '#' + bestId;
 				var currentHash = window.location.hash || '';
 				if (currentHash !== nextHash) {
-					window.history.replaceState(null, '', window.location.pathname + nextHash);
+					var spyUrl = window.location.pathname + nextHash;
+					if (typeof replaceHistoryUrl === 'function') replaceHistoryUrl(spyUrl);
+					else window.history.replaceState(window.history.state || { id: 'root', title: '' }, '', spyUrl);
 				}
 			}
 		}, {
