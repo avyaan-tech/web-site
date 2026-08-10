@@ -586,6 +586,26 @@ html[data-layout="wide"] .avyaan-landing .hero:not(:has(.hero-visual)) {
 	padding-top: 1rem;
 }
 
+/* /work: first-screen cover — full viewport colour + meta pinned to bottom */
+html[data-layout="wide"] #work .avyaan-atmosphere {
+	bottom: auto;
+	height: 100svh;
+	max-height: none;
+}
+
+html[data-layout="wide"] #work .work-cover {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: calc(
+		100svh
+		- var(--avyaan-header-offset, 3.75rem)
+		- clamp(2rem, 5vw, 3.5rem)
+	);
+	padding-bottom: clamp(0.75rem, 2vh, 1.25rem);
+}
+
 /* /work cover hero: mid-weighted copy + flat gears visual */
 html[data-layout="wide"] .avyaan-landing #work-hero {
 	display: grid;
@@ -593,14 +613,10 @@ html[data-layout="wide"] .avyaan-landing #work-hero {
 	gap: clamp(1.5rem, 3.5vw, 3.25rem);
 	align-items: center;
 	box-sizing: border-box;
-	min-height: calc(
-		100svh
-		- var(--avyaan-header-offset, 3.75rem)
-		- clamp(2rem, 5vw, 3.5rem)
-		- 1.5rem
-	);
+	min-height: 0;
+	flex: 1 1 auto;
 	padding-top: clamp(1rem, 3vh, 2rem);
-	padding-bottom: clamp(1.5rem, 5vh, 3rem);
+	padding-bottom: clamp(1rem, 3vh, 2rem);
 }
 
 html[data-layout="wide"] .avyaan-landing #work-hero .hero-left {
@@ -674,8 +690,8 @@ html[data-layout="wide"] #work .work-meta {
 	flex-wrap: wrap;
 	align-items: baseline;
 	gap: 0.65rem 1.35rem;
-	margin: 0;
-	padding: 0.15rem 0 0.35rem;
+	margin: auto 0 0;
+	padding: 0.15rem 0 0;
 	padding-inline-start: 0.55rem;
 	color: var(--avyaan-muted);
 	font-size: 0.98rem;
@@ -1197,11 +1213,20 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 		min-height: 0;
 	}
 
+	html[data-layout="wide"] #work .work-cover {
+		min-height: calc(
+			100svh
+			- var(--avyaan-header-offset, 3.75rem)
+			- clamp(1.25rem, 4vw, 2.5rem)
+		);
+		padding-bottom: 0.75rem;
+	}
+
 	html[data-layout="wide"] .avyaan-landing #work-hero {
 		grid-template-columns: 1fr;
 		min-height: 0;
 		padding-top: 0.75rem;
-		padding-bottom: 1.5rem;
+		padding-bottom: 1rem;
 	}
 
 	html[data-layout="wide"] .avyaan-landing #work-hero .hero-left {

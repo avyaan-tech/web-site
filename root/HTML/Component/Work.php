@@ -23,26 +23,28 @@
 
 		<div class="grid layout-rail">
 
-			<header class="hero reveal" id="work-hero" data-reveal>
-				<div class="hero-left">
-					<div class="hero-copy">
-						<h2 id="work-title">
-							<span class="hero-line reveal-child">Work that delivers</span>
-							<span class="hero-line reveal-child">Results that create an impact</span>
-						</h2>
-						<p class="lead reveal-child">Selected engagements where Avyaan partnered with teams to design intelligent platforms, streamline operations, and accelerate delivery across web, mobile, data, and AI-first experiences.</p>
+			<section class="work-cover" aria-label="Work introduction">
+				<header class="hero reveal" id="work-hero" data-reveal>
+					<div class="hero-left">
+						<div class="hero-copy">
+							<h2 id="work-title">
+								<span class="hero-line reveal-child">Work that delivers</span>
+								<span class="hero-line reveal-child">Results that create an impact</span>
+							</h2>
+							<p class="lead reveal-child">Selected engagements where Avyaan partnered with teams to design intelligent platforms, streamline operations, and accelerate delivery across web, mobile, data, and AI-first experiences.</p>
+						</div>
 					</div>
-				</div>
-				<div class="hero-visual reveal-child" aria-hidden="true">
-					<span class="work-hero-gears"><?php includeSVG('Icon', 'coupled_gears'); ?></span>
-				</div>
-			</header>
+					<div class="hero-visual reveal-child" aria-hidden="true">
+						<span class="work-hero-gears"><?php includeSVG('Icon', 'coupled_gears'); ?></span>
+					</div>
+				</header>
 
-			<div class="work-meta meta reveal" data-reveal>
-				<span>AI, automation, and platform engineering</span>
-				<span>&mdash;</span>
-				<span>from discovery sprints to global rollouts</span>
-			</div>
+				<div class="work-meta meta reveal" data-reveal>
+					<span>AI, automation, and platform engineering</span>
+					<span>&mdash;</span>
+					<span>from discovery sprints to global rollouts</span>
+				</div>
+			</section>
 
 			<section class="skills-grid" aria-label="Core capabilities">
 				<article class="skill-card reveal" data-reveal>
