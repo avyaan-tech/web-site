@@ -5,7 +5,7 @@
 		</a>
 
 		<nav class='avyaan-nav-links' aria-label='Primary'>
-			<a class='avyaan-nav-link XURL' href='/' data-target='root' data-title='' data-section-nav='hero'>Home</a>
+			<a class='avyaan-nav-link XURL' href='/' data-target='root' data-title='' data-home-nav>Home</a>
 			<a class='avyaan-nav-link XURL' href='/work' data-target='work' data-title='Work'>Work</a>
 			<a class='avyaan-nav-link XURL' href='/#portfolio' data-target='root' data-title='' data-section-nav='portfolio'>Portfolio</a>
 			<a class='avyaan-nav-link XURL' href='/#contact' data-target='root' data-title='' data-section-nav='contact'>Contact</a>

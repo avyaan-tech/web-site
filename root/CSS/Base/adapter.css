@@ -448,7 +448,9 @@ html.dark-mode[data-layout="wide"][data-skin="glass"] #header-wrapper.avyaan-chr
 }
 
 html[data-layout="wide"][data-skin="glass"] .avyaan-wrap {
-	padding-top: 0;
+	/* Keep header-offset top padding from the wide rule so first in-flow
+	   controls (e.g. case “All work”) stay below the sticky chrome. */
+	padding-top: calc(var(--avyaan-header-offset, 3.75rem) + clamp(2rem, 5vw, 3.5rem));
 }
 
 html[data-layout="wide"][data-skin="glass"] #footer-wrapper {

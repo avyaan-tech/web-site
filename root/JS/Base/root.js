@@ -50,6 +50,24 @@
 
 	function bindSectionNav() {
 		document.addEventListener('click', function (e) {
+			var homeLink = e.target.closest && e.target.closest('[data-home-nav]');
+			if (homeLink) {
+				if (isHomePage()) {
+					if (scrollToSection('hero')) {
+						e.preventDefault();
+						e.stopImmediatePropagation();
+						window.__avyaanScrollSection = null;
+						if (window.history && window.history.replaceState) {
+							window.history.replaceState(null, '', window.location.pathname);
+						}
+						updateSectionNavActive('hero');
+						updateHomeNavActive(true);
+					}
+				}
+				// Off-home: let XURL SPA-load root (do not full-navigate).
+				return;
+			}
+
 			var link = e.target.closest && e.target.closest('[data-section-nav]');
 			if (!link) return;
 			var sectionId = link.getAttribute('data-section-nav');
@@ -69,7 +87,7 @@
 				return;
 			}
 
-			// Off-home: follow /#section (or /) and block XURL so it cannot SPA-navigate to `/` without the hash.
+			// Off-home: follow /#section and block XURL so it cannot SPA-navigate to `/` without the hash.
 			e.preventDefault();
 			e.stopImmediatePropagation();
 			var href = link.getAttribute('href') || '/';
@@ -123,19 +141,25 @@
 			var nav = link.getAttribute('data-section-nav');
 			link.classList.toggle('is-active', nav === sectionId);
 		});
+		updateHomeNavActive(!sectionId || sectionId === 'hero');
+	}
+
+	function updateHomeNavActive(active) {
+		document.querySelectorAll('[data-home-nav]').forEach(function (link) {
+			link.classList.toggle('is-active', !!active);
+		});
 	}
 
 	// On home: #portfolio. Off home (/work, …): /#portfolio so the section resolves on `/`.
 	function syncSectionNavHrefs() {
 		var onHome = isHomePage();
 		var prefix = typeof getLanguagePrefix === 'function' ? getLanguagePrefix() : '';
+		document.querySelectorAll('[data-home-nav]').forEach(function (link) {
+			link.setAttribute('href', prefix || '/');
+		});
 		document.querySelectorAll('[data-section-nav]').forEach(function (link) {
 			var sectionId = link.getAttribute('data-section-nav');
 			if (!sectionId) return;
-			if (sectionId === 'hero') {
-				link.setAttribute('href', prefix || '/');
-				return;
-			}
 			link.setAttribute('href', onHome ? ('#' + sectionId) : (prefix + '/#' + sectionId));
 		});
 	}
@@ -152,7 +176,8 @@
 		document.querySelectorAll('.avyaan-nav-link[data-target]').forEach(function (link) {
 			var target = link.getAttribute('data-target');
 			var sectionNav = link.getAttribute('data-section-nav');
-			if (sectionNav) return;
+			var homeNav = link.hasAttribute('data-home-nav');
+			if (sectionNav || homeNav) return;
 			var active = (target === 'work' && path.indexOf('/work') === 0);
 			link.classList.toggle('is-active', !!active);
 		});
@@ -166,6 +191,7 @@
 			document.querySelectorAll('[data-section-nav]').forEach(function (link) {
 				link.classList.remove('is-active');
 			});
+			updateHomeNavActive(false);
 			teardownScrollSpy();
 		}
 	}

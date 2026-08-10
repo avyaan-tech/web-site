@@ -804,6 +804,9 @@ a.portfolio-case {
 /* Case study detail */
 .case-breadcrumb {
     margin: 0;
+    padding-top: 0.25rem;
+    position: relative;
+    z-index: 1;
 }
 
 .case-back {
@@ -815,6 +818,9 @@ a.portfolio-case {
     font-size: 0.95rem;
     font-weight: 500;
     opacity: 0.9;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
 }
 
 .case-back:hover,

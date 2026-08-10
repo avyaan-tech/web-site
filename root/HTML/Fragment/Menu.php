@@ -6,7 +6,7 @@
 			<strong class='avyaan-drawer-title'>Avyaan</strong>
 		</div>
 		<nav class='avyaan-drawer-nav' aria-label='Site'>
-			<a class='avyaan-drawer-link XURL' href='/' data-target='root' data-title='' data-section-nav='hero'>
+			<a class='avyaan-drawer-link XURL' href='/' data-target='root' data-title='' data-home-nav>
 				<span>Home</span>
 				<span class='avyaan-drawer-hint'>Landing</span>
 			</a>

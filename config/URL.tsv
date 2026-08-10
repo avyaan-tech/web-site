@@ -14,6 +14,8 @@ Path	Name	Extension
 	logo_full	svg
 	root	svg
 	hero	png
+	hero_light	svg
+	hero_dark	svg
 	portfolio	svg
 	work	svg
 resource/	placeholder	svg
