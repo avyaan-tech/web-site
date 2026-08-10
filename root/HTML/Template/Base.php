@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en' itemscope='' itemtype='http://schema.org/WebPage'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en' itemscope='' itemtype='http://schema.org/WebPage' data-layout="<?php echo htmlspecialchars(getLayoutMode(), ENT_QUOTES, 'UTF-8'); ?>" data-skin="<?php echo htmlspecialchars(getSkinMode(), ENT_QUOTES, 'UTF-8'); ?>">
 <script>(function(){try{var t=localStorage.getItem('cutie-dark-mode');t=t==='true'?'dark':t==='false'?'light':t;if(t!=='system'&&t!=='light'&&t!=='dark')t='system';var r=t==='system'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':t==='system'?'light':t;document.documentElement.setAttribute('data-theme-preference',t);document.documentElement.setAttribute('data-theme-resolved',r);if(r==='dark')document.documentElement.classList.add('dark-mode');document.documentElement.style.colorScheme=r}catch(e){document.documentElement.setAttribute('data-theme-preference','system');document.documentElement.setAttribute('data-theme-resolved','light')}})()</script>
 <head>
 	<meta http-equiv='X-UA-Compatible' content='IE=edge' >
@@ -7,13 +7,16 @@
 	<meta name='title' content="<?php echo $desc.' - '.$config['project_title'] ?>" >
 	<meta name='author' content="<?php echo $config['author'] ?>" >
 	<meta name='viewport' content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
-	<meta name='theme-color' content='#ffffff' >
+	<meta name='theme-color' content='#f8fafc' >
 	<?php require '../HTML/Fragment/Google_plus_meta.php' ?>
 	<?php require '../HTML/Fragment/OG_meta.php' ?>
 	<?php require '../HTML/Fragment/FB_meta.php' ?>
 	<?php require '../HTML/Fragment/Twitter_meta.php' ?>
 	<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' >
 	<link rel='apple-touch-icon' type='image/png' href='/apple-touch-icon.png' >
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 	<link href="<?php echo $config['base_url']; if($id != 'root') echo '/'.$id ?>" rel='canonical' >
 	<title><?php echo $desc.' - '.$config['project_title']; ?></title>
 <?php if($bPublish) {
@@ -29,7 +32,9 @@
 <?php	}
 	require '../JS/Fragment/JS.php';
 	require '../JS/Fragment/GTranslate.php';
-	require '../JS/Fragment/GCSE.php';
+	// Prefer site search/chrome overrides so other Cutie sites keep framework GCSE.
+	$siteGcseJs = __DIR__.'/../../JS/Fragment/GCSE.php';
+	require is_file($siteGcseJs) ? $siteGcseJs : '../JS/Fragment/GCSE.php';
 	require '../JS/Fragment/Project_title.php';
 	require '../CSS/Fragment/CSS.php';
 ?>
@@ -49,7 +54,10 @@
 							<?php require '../HTML/Fragment/LanguageSwitcher.php' ?>
 							<div id='google_translate_element'></div>
 						</div>
-						<?php require '../HTML/Fragment/GCSE.php' ?>
+						<?php
+							$siteGcseHtml = __DIR__.'/../Fragment/GCSE.php';
+							require is_file($siteGcseHtml) ? $siteGcseHtml : '../HTML/Fragment/GCSE.php';
+						?>
 						<div id='canvas-wrapper'>
 							<div id='path-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><div id='path'><?php require '../HTML/Fragment/Path.php' ?></div></div>
 							<div id='title-container' class="<?php echo ($id == 'root'? 'hide_scale' : '') ?>"><h1 id='title'><?php echo ($id == 'root'? '&nbsp;' : $label) ?></h1></div>

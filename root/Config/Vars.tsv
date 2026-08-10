@@ -3,9 +3,11 @@ project_short_name	Avyaan
 project_description	Avyaan Technologies
 site_name	Avyaan.tech
 site_domain	avyaan.tech
-base_url	https://avyaan.tech
+base_url	https://www.avyaan.tech
 version	1.0.0
 author	Avyaan Technologies
+layout	wide
+skin	glass
 twitter_owner	avyaantech
 twitter_author	avyaantech
 fb_version	3.0

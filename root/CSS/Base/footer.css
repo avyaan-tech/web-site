@@ -1,5 +1,6 @@
 #footer-wrapper {
-	margin-top: -186px;
+	margin-top: 0;
+	padding: 2rem var(--layout-gutter, 1.5rem) 1.5rem;
 }
 
 #social-x, #social-linkedin {
@@ -8,4 +9,34 @@
 
 .social {
 	margin: 20px 10px;
+	transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social:hover {
+	transform: translateY(-3px);
+	opacity: 0.92;
+}
+
+/* Equalize icon contrast — SVG fills are light-gray/white and wash out in light mode */
+.social .image path,
+.social .image svg path {
+	fill: var(--avyaan-icon-fill, #64748b) !important;
+}
+
+#site-linkedin:hover path,
+#site-x:hover path,
+#site-facebook:hover path {
+	fill: var(--avyaan-accent, #0095d9) !important;
+}
+
+html[data-layout="wide"][data-skin="glass"] #footer-wrapper-inside {
+	padding: 0;
+	border-radius: 0;
+	background: none;
+	border: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	box-shadow: none;
+	max-width: var(--layout-rail-max, 1480px);
+	margin: 0 auto;
 }

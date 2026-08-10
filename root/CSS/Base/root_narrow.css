@@ -1,6 +1,7 @@
 @media (max-width:720px) {
     #hero-title .hero-line {
         display: block;
+        white-space: nowrap;
     }
 
     #hero-title .hero-line+.hero-line {
@@ -23,7 +24,7 @@
         font-size: 1.6rem;
         line-height: 1.15;
         margin-bottom: .4rem;
-        max-width: 36ch;
+        max-width: none;
     }
 
     .hero-left p.lead {

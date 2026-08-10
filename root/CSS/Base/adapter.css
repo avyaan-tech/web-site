@@ -1,0 +1,1252 @@
+/*
+ * Avyaan site adapter — full-bleed marketing shell.
+ * Framework stays classic by default; this file owns Avyaan's radical chrome.
+ */
+
+html[data-layout="wide"][data-skin="glass"] {
+	--layout-max: none;
+	--layout-header-max: none;
+	--layout-rail-max: min(1520px, calc(100vw - 2rem));
+	--layout-gutter: clamp(1rem, 3.5vw, 3rem);
+	--avyaan-header-offset: 3.75rem;
+	--glass-bg: rgba(255, 255, 255, 0.72);
+	--glass-border: rgba(148, 163, 184, 0.28);
+	--glass-highlight: rgba(0, 149, 217, 0.18);
+}
+
+html.avyaan-drawer-open {
+	overflow: hidden;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] {
+	--glass-bg: rgba(8, 14, 34, 0.55);
+	--glass-border: rgba(140, 190, 255, 0.16);
+	--glass-highlight: rgba(0, 194, 255, 0.22);
+}
+
+html[data-layout="wide"][data-skin="glass"] body {
+	background-color: var(--avyaan-deep);
+	background-image: var(--avyaan-body-bg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	color: var(--avyaan-ink);
+	font-family: var(--avyaan-font-body);
+	overflow-x: clip;
+}
+
+/* Keep classic Cutie scrollbar-gutter compensation off for full-bleed marketing */
+html[data-layout="wide"][data-skin="glass"] {
+	margin-left: 0;
+}
+
+/* ——— Full-bleed shell (abandon article max-widths) ——— */
+html[data-layout="wide"][data-skin="glass"] #main-wrapper {
+	max-width: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	min-height: 100vh;
+}
+
+/* Collapse the sticky AJAX bar when idle — classic shell used -8px main margin instead */
+html[data-layout="wide"][data-skin="glass"] #wait_loader.hide {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/*
+ * Search / translate must not consume document flow. Landing uses a negative
+ * margin so hero atmosphere sits under the transparent sticky header; in-flow
+ * chrome would push that underlay away and leave a blank band behind the nav.
+ */
+html[data-layout="wide"][data-skin="glass"] #content-wrapper-inside {
+	position: relative;
+}
+
+html[data-layout="wide"][data-skin="glass"] #search_box,
+html[data-layout="wide"][data-skin="glass"] #translation-controls {
+	position: absolute;
+	left: 0;
+	right: 0;
+	/* content-wrapper-inside is pulled up by landing's negative header offset */
+	top: var(--avyaan-header-offset, 3.75rem);
+	z-index: 40;
+	box-sizing: border-box;
+	padding: 0.55rem max(0.5rem, calc(var(--layout-gutter) - 12px)) 0.45rem;
+	background: transparent;
+}
+
+html[data-layout="wide"][data-skin="glass"] #translation-controls:not(.hide_display) ~ #search_box:not(.hide_display) {
+	top: calc(var(--avyaan-header-offset, 3.75rem) + 3.25rem);
+}
+
+html[data-layout="wide"][data-skin="glass"] #header-wrapper-divider,
+html[data-layout="wide"][data-skin="glass"] #footer-wrapper-divider,
+html[data-layout="wide"][data-skin="glass"] .shadow-scroll-top,
+html[data-layout="wide"][data-skin="glass"] .shadow-scroll-bottom {
+	display: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] #wrapper {
+	padding-bottom: 0;
+}
+
+html[data-layout="wide"][data-skin="glass"] #canvas-wrapper-inner-container {
+	max-width: none;
+	width: 100%;
+	display: block;
+}
+
+html[data-layout="wide"][data-skin="glass"] #canvas-wrapper {
+	overflow: visible;
+}
+
+html[data-layout="wide"][data-skin="glass"] #canvas-main {
+	width: 100%;
+	transform: none !important;
+	float: none;
+	overflow: visible;
+	transition: opacity 0.45s ease, filter 0.45s ease;
+}
+
+html[data-layout="wide"][data-skin="glass"] #canvas-main.hide {
+	opacity: 0;
+	filter: blur(6px);
+}
+
+html[data-layout="wide"][data-skin="glass"] #nav-menu {
+	float: none;
+	width: auto;
+	transform: none;
+	transition: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] #path-container,
+html[data-layout="wide"][data-skin="glass"] #title-container {
+	display: none;
+}
+
+/* ——— Floating full-width glass nav ——— */
+html[data-layout="wide"][data-skin="glass"] #header-wrapper.avyaan-chrome {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	height: auto;
+	min-height: 0;
+	left: auto;
+	right: auto;
+	max-width: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	background: transparent;
+	background-image: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] #header-wrapper.avyaan-chrome.is-compact {
+	transform: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav {
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	align-items: center;
+	column-gap: 0.85rem;
+	row-gap: 0.5rem;
+	padding: 0.35rem max(0.5rem, calc(var(--layout-gutter) - 12px));
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-brand {
+	justify-self: start;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	text-decoration: none;
+	min-width: 0;
+	color: inherit;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-links {
+	justify-self: end;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-brand-mark {
+	display: inline-flex;
+	width: 148px;
+	height: 45px;
+	flex: 0 0 auto;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-brand-mark svg,
+html[data-layout="wide"][data-skin="glass"] #header-logo-image,
+html[data-layout="wide"][data-skin="glass"] .avyaan-brand-mark .image {
+	width: 148px;
+	height: 45px;
+	display: block;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-brand-text {
+	display: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-links {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.15rem;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link {
+	position: relative;
+	padding: 0.5rem 0.65rem;
+	border-radius: 0;
+	color: var(--avyaan-nav-link);
+	text-decoration: none;
+	font-size: 0.92rem;
+	font-weight: 600;
+	transition: color 0.2s ease;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link::after {
+	content: "";
+	position: absolute;
+	left: 0.65rem;
+	right: 0.65rem;
+	bottom: 0.2rem;
+	height: 2px;
+	border-radius: 2px;
+	background: linear-gradient(90deg, var(--avyaan-accent), var(--avyaan-accent-2));
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.28s ease;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link:hover,
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link:focus-visible,
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link.is-active {
+	color: var(--avyaan-nav-link-hover);
+	background: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link:hover::after,
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link:focus-visible::after,
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link.is-active::after {
+	transform: scaleX(1);
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-nav-actions {
+	justify-self: end;
+	align-self: start;
+	float: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+html[data-layout="wide"][data-skin="glass"] #header_buttons_right {
+	float: none;
+	display: inline-flex;
+	align-items: center;
+}
+
+html[data-layout="wide"][data-skin="glass"] #header_button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.15rem;
+}
+
+html[data-layout="wide"][data-skin="glass"] #search-button,
+html[data-layout="wide"][data-skin="glass"] #translate-button,
+html[data-layout="wide"][data-skin="glass"] #darkmode-button,
+html[data-layout="wide"][data-skin="glass"] #menu-button {
+	margin: 0;
+	width: 36px;
+	height: 36px;
+	border-radius: 999px;
+	display: inline-grid;
+	place-items: center;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+html[data-layout="wide"][data-skin="glass"] #search-button svg,
+html[data-layout="wide"][data-skin="glass"] #darkmode-button svg,
+html[data-layout="wide"][data-skin="glass"] #menu-button svg,
+html[data-layout="wide"][data-skin="glass"] #darkmode-button .theme-current-icon {
+	width: 26px;
+	height: 26px;
+}
+
+html[data-layout="wide"][data-skin="glass"] #translate-button svg {
+	width: 24px;
+	height: 24px;
+}
+
+html[data-layout="wide"][data-skin="glass"] #theme-menu {
+	top: 42px;
+}
+
+html[data-layout="wide"][data-skin="glass"] #search-button:hover,
+html[data-layout="wide"][data-skin="glass"] #translate-button:hover,
+html[data-layout="wide"][data-skin="glass"] #darkmode-button:hover,
+html[data-layout="wide"][data-skin="glass"] #menu-button:hover {
+	background: rgba(255, 255, 255, 0.06);
+	transform: translateY(-1px);
+}
+
+html[data-layout="wide"][data-skin="glass"] #header_buttons_right path[fill]:not([fill='none']),
+html[data-layout="wide"][data-skin="glass"] #menu-button path[fill]:not([fill='none']) {
+	fill: var(--avyaan-icon-fill);
+}
+
+html[data-layout="wide"][data-skin="glass"] #menu-button {
+	display: none;
+}
+
+/* ——— Overlay drawer menu (replaces article tile rail) ——— */
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer {
+	position: fixed;
+	inset: 0;
+	z-index: 60;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-backdrop {
+	position: absolute;
+	inset: 0;
+	background: var(--avyaan-drawer-backdrop);
+	backdrop-filter: blur(6px);
+	opacity: 0;
+	transition: opacity 0.35s ease;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-panel {
+	position: absolute;
+	top: 0.85rem;
+	right: 0.85rem;
+	bottom: 0.85rem;
+	width: min(380px, calc(100vw - 1.7rem));
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	transform: translateX(110%);
+	transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+	overflow: auto;
+}
+
+html[data-layout="wide"][data-skin="glass"] .pml-open .avyaan-drawer,
+html[data-layout="wide"][data-skin="glass"] #main-wrapper.pml-open .avyaan-drawer {
+	pointer-events: auto;
+	visibility: visible;
+}
+
+html[data-layout="wide"][data-skin="glass"] .pml-open .avyaan-drawer-backdrop {
+	opacity: 1;
+}
+
+html[data-layout="wide"][data-skin="glass"] .pml-open .avyaan-drawer-panel,
+html[data-layout="wide"][data-skin="glass"] .pml-open #nav-menu .avyaan-drawer-panel {
+	transform: translateX(0);
+}
+
+html[data-layout="wide"][data-skin="glass"] .pml-open #canvas-main {
+	transform: none !important;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-kicker {
+	display: block;
+	font-size: 0.75rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-title {
+	font-family: var(--avyaan-font-display);
+	font-size: 1.8rem;
+	color: var(--avyaan-heading);
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 0.55rem;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-link {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+	padding: 1rem 1.05rem;
+	border-radius: 16px;
+	text-decoration: none;
+	color: var(--avyaan-heading);
+	background: var(--avyaan-drawer-link-bg);
+	border: 1px solid var(--avyaan-drawer-link-border);
+	transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-link span:first-child {
+	font-family: var(--avyaan-font-display);
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-hint {
+	font-size: 0.8rem;
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-link:hover,
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-link:focus-visible {
+	transform: translateX(-4px);
+	border-color: rgba(0, 194, 255, 0.35);
+	background: rgba(0, 194, 255, 0.08);
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-foot {
+	margin-top: auto;
+	color: var(--avyaan-muted);
+	font-size: 0.92rem;
+	line-height: 1.45;
+}
+
+html[data-layout="wide"][data-skin="glass"] #wrapper,
+html[data-layout="wide"][data-skin="glass"] #main,
+html[data-layout="wide"][data-skin="glass"] #content-wrapper,
+html[data-layout="wide"][data-skin="glass"] #content {
+	background: transparent;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] #main-wrapper {
+	background: transparent;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] #header-wrapper.avyaan-chrome {
+	background: transparent;
+	background-image: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	box-shadow: none;
+	border: none;
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-wrap {
+	padding-top: 0;
+}
+
+html[data-layout="wide"][data-skin="glass"] #footer-wrapper {
+	margin-top: 0;
+	position: relative;
+	z-index: 2;
+	padding-top: 2rem;
+}
+
+html[data-layout="wide"][data-skin="glass"] .footer-content,
+html[data-layout="wide"][data-skin="glass"] .footer-content a {
+	color: var(--avyaan-footer);
+}
+
+/* ——— Landing atmosphere & composition ——— */
+html[data-layout="wide"] .avyaan-landing {
+	font-family: var(--avyaan-font-body);
+	color: var(--avyaan-ink);
+	/* Sit under the sticky transparent header so hero atmosphere continues upward */
+	margin-top: calc(-1 * var(--avyaan-header-offset, 3.75rem));
+}
+
+html[data-layout="wide"] .avyaan-wrap {
+	position: relative;
+	isolation: isolate;
+	place-items: stretch;
+	justify-items: stretch;
+	padding:
+		calc(var(--avyaan-header-offset, 3.75rem) + clamp(2rem, 5vw, 3.5rem))
+		var(--layout-gutter)
+		4rem;
+	min-height: 85vh;
+	/* Allow atmosphere to occupy the header band without horizontal spill */
+	overflow-x: clip;
+	overflow-y: visible;
+	background: transparent;
+}
+
+html[data-layout="wide"] .avyaan-atmosphere {
+	position: absolute;
+	top: 0;
+	right: -6%;
+	bottom: auto;
+	left: -6%;
+	height: min(110vh, 920px);
+	pointer-events: none;
+	z-index: -1;
+	overflow: hidden;
+}
+
+html[data-layout="wide"] .orb {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(40px);
+	opacity: var(--avyaan-orb-opacity);
+	animation: avyaan-orb 18s ease-in-out infinite alternate;
+}
+
+html[data-layout="wide"] .orb-a {
+	width: 42vw;
+	height: 42vw;
+	max-width: 520px;
+	max-height: 520px;
+	left: -8%;
+	top: 4%;
+	background: radial-gradient(circle, rgba(0, 194, 255, 0.45), transparent 68%);
+}
+
+html[data-layout="wide"] .orb-b {
+	width: 36vw;
+	height: 36vw;
+	max-width: 460px;
+	max-height: 460px;
+	right: -6%;
+	top: 18%;
+	background: radial-gradient(circle, rgba(109, 94, 252, 0.4), transparent 70%);
+	animation-delay: -6s;
+}
+
+html[data-layout="wide"] .orb-c {
+	width: 28vw;
+	height: 28vw;
+	max-width: 340px;
+	max-height: 340px;
+	left: 38%;
+	top: 48%;
+	background: radial-gradient(circle, rgba(0, 255, 200, 0.18), transparent 70%);
+	animation-delay: -11s;
+}
+
+html[data-layout="wide"] .bg-lines {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.85;
+}
+
+html[data-layout="wide"] .flow-line {
+	stroke-dasharray: 8 14;
+	animation: avyaan-flow 22s linear infinite;
+}
+
+html[data-layout="wide"] .avyaan-wrap .grid {
+	max-width: var(--layout-rail-max);
+	width: 100%;
+	margin: 0 auto;
+	gap: clamp(1.75rem, 3.5vw, 3.25rem);
+}
+
+html[data-layout="wide"] .avyaan-landing .eyebrow {
+	margin: 0 0 0.65rem;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--avyaan-eyebrow);
+}
+
+html[data-layout="wide"] .avyaan-landing .hero:has(.hero-visual) {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+	gap: clamp(1.25rem, 3vw, 3rem);
+	align-items: center;
+	width: 100%;
+	min-height: min(78vh, 820px);
+}
+
+html[data-layout="wide"] .avyaan-landing .hero:not(:has(.hero-visual)) {
+	display: block;
+	max-width: none;
+	width: 100%;
+	padding-top: 1rem;
+}
+
+/* /work cover hero: mid-weighted copy + flat gears visual */
+html[data-layout="wide"] .avyaan-landing #work-hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+	gap: clamp(1.5rem, 3.5vw, 3.25rem);
+	align-items: center;
+	box-sizing: border-box;
+	min-height: calc(
+		100svh
+		- var(--avyaan-header-offset, 3.75rem)
+		- clamp(2rem, 5vw, 3.5rem)
+		- 1.5rem
+	);
+	padding-top: clamp(1rem, 3vh, 2rem);
+	padding-bottom: clamp(1.5rem, 5vh, 3rem);
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .hero-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: stretch;
+	gap: 0;
+	min-width: 0;
+	min-height: 0;
+	padding-inline-start: 0.55rem;
+	padding-inline-end: clamp(0.25rem, 1.5vw, 1rem);
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .hero-copy {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.85rem, 2vh, 1.25rem);
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero #work-title {
+	display: flex;
+	flex-direction: column;
+	gap: 0.28rem;
+	margin: 0;
+	/* Slightly tighter than home so the long second line stays in-column */
+	font-size: clamp(2.2rem, 4.6vw, 3.65rem);
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero #work-title .hero-line {
+	/* Home lines stay nowrap; work copy is longer and must not spill over gears */
+	white-space: normal;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .hero-line + .hero-line {
+	margin-top: 0;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero p.lead {
+	margin: 0;
+	max-width: 40rem;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .hero-visual {
+	padding-inline: 0;
+	justify-content: flex-start;
+	align-items: left;
+	background: none;
+	border: 0;
+	box-shadow: none;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears {
+	display: block;
+	width: min(100%, 340px);
+	margin-inline: 0 0;
+	line-height: 0;
+	/* Soft float only — continuous gear spin reads as template gimmick */
+	animation: avyaan-float 8s ease-in-out infinite;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	filter: drop-shadow(0 18px 36px rgba(0, 120, 200, 0.22));
+}
+
+html[data-layout="wide"] #work .work-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.65rem 1.35rem;
+	margin: 0;
+	padding: 0.15rem 0 0.35rem;
+	padding-inline-start: 0.55rem;
+	color: var(--avyaan-muted);
+	font-size: 0.98rem;
+	letter-spacing: 0.01em;
+}
+
+html[data-layout="wide"] #work .work-meta div + div::before {
+	content: none;
+}
+
+/* /work: match home portfolio card spacing; keep icon contrast */
+html[data-layout="wide"] #work .grid.layout-rail {
+	gap: 2.5rem;
+}
+
+html[data-layout="wide"] #work .skills-grid {
+	margin-top: 0;
+}
+
+html[data-layout="wide"] #work .skill-card {
+	min-height: 0;
+}
+
+html[data-layout="wide"] #work .portfolio-showcase {
+	gap: 2rem;
+	margin-top: 0;
+}
+
+html[data-layout="wide"] #work .portfolio-case .case-icon:not(.external-icon) {
+	width: 96px;
+	height: 96px;
+	padding: 1.2rem;
+	background: linear-gradient(145deg, rgba(0, 194, 255, 0.34), rgba(79, 125, 255, 0.18));
+	box-shadow:
+		0 0 0 1px rgba(127, 232, 255, 0.35),
+		0 12px 28px rgba(0, 120, 200, 0.28);
+	color: #f4fbff;
+}
+
+html[data-layout="wide"] #work .portfolio-case .case-icon:not(.external-icon) svg {
+	width: 52px;
+	height: 52px;
+	stroke: currentColor;
+	color: inherit;
+}
+
+html[data-layout="wide"] #work .profile-grid {
+	margin-top: 0;
+}
+
+html[data-layout="wide"] #work .contact-cta,
+html[data-layout="wide"] #work .work-contact-cta {
+	margin-top: 0;
+	padding: 0.35rem 0 0.5rem;
+	padding-inline-start: 0.55rem;
+	border: 0;
+	border-radius: 0;
+	background: none;
+	box-shadow: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	justify-content: flex-start;
+	gap: clamp(1.25rem, 3vw, 2.5rem);
+	align-items: center;
+}
+
+html[data-layout="wide"][data-skin="glass"] #work .work-contact-cta {
+	background: none;
+	border: 0;
+	box-shadow: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+
+html[data-layout="wide"] #work .work-contact-cta:hover {
+	transform: none;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+html[data-layout="wide"] #work .work-contact-cta > div:first-child {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+html[data-layout="wide"] #work .work-contact-cta .contact-cta-title {
+	display: block;
+	font-family: var(--avyaan-font-display);
+	font-size: clamp(1.55rem, 2.6vw, 2.05rem);
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1.15;
+	color: var(--avyaan-heading);
+	margin-bottom: 0.45rem;
+}
+
+html[data-layout="wide"] #work .work-contact-cta .contact-cta-sub {
+	display: block;
+	max-width: none;
+	font-family: var(--avyaan-font-body);
+	font-size: clamp(1rem, 1.35vw, 1.12rem);
+	line-height: 1.55;
+	letter-spacing: 0.005em;
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"] #work .work-contact-cta .contact-cta-actions {
+	flex: 0 0 auto;
+	margin-left: 0;
+}
+
+html[data-layout="wide"] .avyaan-landing .hero-left {
+	text-align: left;
+	justify-self: start;
+	max-width: none;
+	width: 100%;
+}
+
+html[data-layout="wide"] .avyaan-landing #hero-title,
+html[data-layout="wide"] .avyaan-landing #work-title,
+html[data-layout="wide"] .avyaan-landing #case-title,
+html[data-layout="wide"] .avyaan-landing h1 {
+	font-family: var(--avyaan-font-display);
+	font-size: clamp(2.4rem, 6vw, 4.4rem);
+	/* Keep display rhythm but leave room for descenders (e.g. “g” in “scale”) */
+	line-height: 1.08;
+	font-weight: 800;
+	letter-spacing: -0.035em;
+	color: var(--avyaan-heading);
+	margin: 0 0 1.15rem;
+	overflow: visible;
+}
+
+html[data-layout="wide"] .avyaan-landing .hero-line {
+	display: block;
+	white-space: nowrap;
+	overflow: visible;
+}
+
+html[data-layout="wide"] .avyaan-landing .hero-line + .hero-line {
+	margin: 0.12rem 0 0;
+	padding-bottom: 0.12em;
+	background: var(--avyaan-heading-accent);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+html[data-layout="wide"] .avyaan-landing p.lead {
+	font-size: clamp(1.05rem, 1.55vw, 1.22rem);
+	line-height: 1.55;
+	max-width: none;
+	color: var(--avyaan-muted);
+	margin: 0 0 1.5rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .cta-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+html[data-layout="wide"] .avyaan-landing .btn {
+	border-radius: 999px;
+	padding: 0.85rem 1.45rem;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	background: linear-gradient(120deg, #00c2ff, #4f7dff 55%, #6d5efc);
+	color: #041018;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 14px 36px var(--avyaan-accent-glow);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+html[data-layout="wide"] .avyaan-landing .btn.ghost {
+	background: transparent;
+	color: var(--avyaan-btn-ghost-color);
+	border: 1px solid var(--avyaan-btn-ghost-border);
+	box-shadow: none;
+}
+
+html[data-layout="wide"] .avyaan-landing .btn:hover,
+html[data-layout="wide"] .avyaan-landing .btn:focus-visible {
+	transform: translateY(-3px) scale(1.01);
+	filter: brightness(1.05);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 18px 44px rgba(0, 194, 255, 0.5);
+}
+
+html[data-layout="wide"] .avyaan-landing .btn.ghost:hover,
+html[data-layout="wide"] .avyaan-landing .btn.ghost:focus-visible {
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: none;
+}
+
+html[data-layout="wide"] .avyaan-landing .hero-visual {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 0;
+	width: 100%;
+	padding-inline: clamp(0.75rem, 3vw, 2.25rem);
+	box-sizing: border-box;
+}
+
+html[data-layout="wide"] .hero-visual-frame {
+	position: relative;
+	width: min(100%, 540px);
+	margin-inline: auto;
+	padding: 0.85rem;
+	border-radius: 28px;
+	background: var(--avyaan-hero-frame-bg);
+	border: 1px solid var(--avyaan-hero-frame-border);
+	box-shadow: var(--avyaan-hero-frame-shadow);
+	overflow: hidden;
+}
+
+html[data-layout="wide"] .hero-visual-frame::before {
+	content: "";
+	position: absolute;
+	inset: -40% auto auto 20%;
+	width: 60%;
+	height: 50%;
+	background: radial-gradient(circle, rgba(0, 194, 255, 0.35), transparent 70%);
+	filter: blur(8px);
+	animation: avyaan-orb 10s ease-in-out infinite alternate;
+}
+
+html[data-layout="wide"] .avyaan-landing .hero-visual img {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	border-radius: 18px;
+	filter: drop-shadow(0 20px 40px rgba(15, 23, 42, 0.14));
+	animation: avyaan-float 7s ease-in-out infinite;
+}
+
+html[data-layout="wide"] .avyaan-landing .hero-visual .hero-image-dark {
+	display: none;
+}
+
+html.dark-mode[data-layout="wide"] .avyaan-landing .hero-visual .hero-image-light {
+	display: none;
+}
+
+html.dark-mode[data-layout="wide"] .avyaan-landing .hero-visual .hero-image-dark {
+	display: block;
+	filter: drop-shadow(0 24px 48px rgba(0, 120, 200, 0.28));
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .portfolio-case,
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .contact-cta,
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .work-card {
+	background: var(--avyaan-glass-bg);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border: 1px solid var(--avyaan-glass-border);
+	box-shadow: var(--avyaan-glass-shadow);
+}
+
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .card,
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .skill-card,
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .timeline-item,
+html[data-layout="wide"][data-skin="glass"] .avyaan-landing .bio-card {
+	background: var(--avyaan-card-bg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--avyaan-card-border);
+	transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+html[data-layout="wide"] .avyaan-landing .card:hover,
+html[data-layout="wide"] .avyaan-landing .skill-card:hover,
+html[data-layout="wide"] .avyaan-landing .portfolio-case:hover,
+html[data-layout="wide"] .avyaan-landing .work-card:hover {
+	transform: translateY(-6px);
+	border-color: rgba(0, 194, 255, 0.35);
+	box-shadow: 0 22px 50px rgba(0, 30, 70, 0.35), 0 0 0 1px rgba(0, 194, 255, 0.12);
+}
+
+html[data-layout="wide"] .avyaan-landing .trust-bar {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	padding: 0;
+	border-radius: 0;
+	width: 100%;
+	background: none;
+	border: none;
+	box-shadow: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+
+html[data-layout="wide"] .avyaan-landing .profile-summary,
+html[data-layout="wide"] .avyaan-landing .contact-section,
+html[data-layout="wide"] .avyaan-landing .section-head,
+html[data-layout="wide"] .avyaan-landing .trust-bar {
+	width: 100%;
+}
+
+html[data-layout="wide"] .avyaan-landing .profile-summary,
+html[data-layout="wide"] .avyaan-landing .contact-section {
+	background: none;
+	border: none;
+	box-shadow: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-section .section-head {
+	margin-bottom: 0.35rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-body p {
+	margin: 0 0 0.75rem;
+	color: var(--avyaan-body, #d6e6ff);
+	line-height: 1.6;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-body p:last-child {
+	margin-bottom: 0;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-mail-link {
+	color: var(--avyaan-accent, #5ec8ff);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-mail-link:hover {
+	text-decoration: underline;
+}
+
+html[data-layout="wide"]:not(.dark-mode) .avyaan-landing .contact-body p {
+	color: var(--avyaan-body);
+}
+
+html[data-layout="wide"] .avyaan-landing .trust-bar .meta {
+	margin-top: 0;
+	gap: 1.25rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .section-head {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.2rem;
+	text-align: left;
+}
+
+html[data-layout="wide"] .avyaan-landing .section-head h2,
+html[data-layout="wide"] .avyaan-landing .section-head h3 {
+	margin: 0;
+	font-family: var(--avyaan-font-display);
+	font-size: clamp(1.6rem, 3vw, 2.35rem);
+	font-weight: 700;
+	color: var(--avyaan-heading) !important;
+	letter-spacing: -0.02em;
+}
+
+html[data-layout="wide"] .avyaan-landing .features {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.15rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .card {
+	padding: 1.25rem 1.2rem 1.35rem;
+	border-radius: 18px;
+}
+
+html[data-layout="wide"] .avyaan-landing .card h3 {
+	font-family: var(--avyaan-font-display);
+	font-size: 1.08rem;
+	color: var(--avyaan-heading) !important;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-cta {
+	justify-content: space-between;
+	padding: 1.5rem 1.6rem;
+	border-radius: 22px;
+	gap: 1.25rem;
+	margin-top: 10rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .contact-cta-title {
+	font-family: var(--avyaan-font-display);
+	font-size: 1.35rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-case {
+	border-radius: 22px;
+	transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-case .case-content {
+	max-width: none;
+}
+
+html[data-layout="wide"] .avyaan-landing .skills-grid {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-section-cta {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1.5rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-section-cta .btn.ghost {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-section-cta .cta-arrow {
+	font-size: 1.05em;
+	line-height: 1;
+	transition: transform 0.25s ease;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-section-cta .btn.ghost:hover .cta-arrow,
+html[data-layout="wide"] .avyaan-landing .portfolio-section-cta .btn.ghost:focus-visible .cta-arrow {
+	transform: translateX(3px);
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-showcase--featured {
+	margin-top: 1.25rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-showcase--featured .portfolio-case {
+	min-height: 13.5rem;
+	padding: 2.35rem 2rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.95rem;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-icons-amp {
+	flex-shrink: 0;
+	font-size: 1.35rem;
+	font-weight: 600;
+	line-height: 1;
+	color: var(--avyaan-muted, #9eb6d8);
+	user-select: none;
+}
+
+html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-icon {
+	width: 92px;
+	height: 92px;
+	padding: 1.1rem;
+}
+
+@media (max-width: 1100px) {
+	html[data-layout="wide"] .avyaan-landing .skills-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	html[data-layout="wide"][data-skin="glass"] .avyaan-brand-text {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	html[data-layout="wide"][data-skin="glass"] body {
+		background-attachment: scroll;
+		background-size: 100% auto;
+	}
+
+	html[data-layout="wide"][data-skin="glass"] .avyaan-nav {
+		grid-template-columns: minmax(0, 1fr) auto;
+	}
+
+	html[data-layout="wide"][data-skin="glass"] .avyaan-nav-links {
+		display: none;
+	}
+
+	html[data-layout="wide"][data-skin="glass"] #menu-button {
+		display: inline-grid;
+	}
+
+	html[data-layout="wide"][data-skin="glass"] #header-wrapper.avyaan-chrome {
+		border-radius: 0;
+		width: 100%;
+	}
+
+	html[data-layout="wide"] .avyaan-landing .hero:has(.hero-visual) {
+		grid-template-columns: 1fr;
+		min-height: 0;
+	}
+
+	html[data-layout="wide"] .avyaan-landing #work-hero {
+		grid-template-columns: 1fr;
+		min-height: 0;
+		padding-top: 0.75rem;
+		padding-bottom: 1.5rem;
+	}
+
+	html[data-layout="wide"] .avyaan-landing #work-hero .hero-left {
+		justify-content: flex-start;
+		gap: 0;
+	}
+
+	html[data-layout="wide"] .avyaan-landing #work-hero .hero-copy {
+		gap: 0.85rem;
+	}
+
+	html[data-layout="wide"] .avyaan-landing #work-hero #work-title {
+		gap: 0.2rem;
+	}
+
+	html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears {
+		width: min(100%, 280px);
+	}
+
+	html[data-layout="wide"] .avyaan-landing .hero-visual {
+		justify-content: center;
+		order: -1;
+		padding-inline: clamp(0.75rem, 5vw, 2rem);
+	}
+
+	html[data-layout="wide"] .avyaan-landing #work-hero .hero-visual {
+		order: 0;
+		padding-inline: 0;
+	}
+
+	html[data-layout="wide"] .avyaan-landing .features {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 720px) {
+	html[data-layout="wide"] .avyaan-landing .features,
+	html[data-layout="wide"] .avyaan-landing .skills-grid {
+		grid-template-columns: 1fr;
+	}
+
+	html[data-layout="wide"] .avyaan-landing .contact-cta {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	html[data-layout="wide"] .avyaan-landing .contact-cta-actions {
+		margin-left: 0;
+	}
+
+	html[data-layout="wide"] .avyaan-landing #hero-title,
+	html[data-layout="wide"] .avyaan-landing #work-title,
+	html[data-layout="wide"] .avyaan-landing #case-title {
+		font-size: clamp(2rem, 10vw, 2.7rem);
+	}
+}
+
+@keyframes avyaan-orb {
+	from { transform: translate3d(0, 0, 0) scale(1); }
+	to { transform: translate3d(3%, 4%, 0) scale(1.08); }
+}
+
+@keyframes avyaan-float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+}
+
+@keyframes avyaan-flow {
+	to { stroke-dashoffset: -220; }
+}

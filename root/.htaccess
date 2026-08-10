@@ -42,6 +42,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/Site%{REQUEST_URI} -f
 RewriteRule ^(.+)$ site/$1 [L]
 
+RewriteRule ^portfolio/?$ /work [R=301,L]
+RewriteRule ^portfolio\.json$ /work.json [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*?)\.json$ Framework/HTML/Component.php [L]
 

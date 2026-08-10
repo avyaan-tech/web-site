@@ -22,10 +22,9 @@
 	align-items: start;
 }
 
-/* Hero line wrapper: inline by default (no break on wide screens), block on small screens */
-#hero-title .hero-line { display: inline; margin: 0; }
-/* Add a small visible gap between inline hero-line spans on wide screens */
-#hero-title .hero-line + .hero-line { margin-left: .45ch; }
+/* Hero lines break only at the period; keep each clause on one line */
+#hero-title .hero-line { display: block; margin: 0; white-space: nowrap; }
+#hero-title .hero-line + .hero-line { margin-left: 0; }
 
 /* Primary selector: style anchors with class .product */
 .products-list .product {

@@ -1,6 +1,4 @@
 <div id='footer-wrapper'>
-	<div class='shadow-scroll-bottom'></div>
-	<div id='footer-wrapper-divider'></div>
 	<div class='footer-content' id='footer-support'>
 	</div>
 	<div id='footer-wrapper-inside'>

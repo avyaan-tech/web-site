@@ -1,0 +1,227 @@
+/*
+ * Avyaan theme tokens — light mode is default; dark-mode class activates dark palette.
+ */
+
+html[data-layout="wide"][data-skin="glass"] {
+	--avyaan-accent: #0095d9;
+	--avyaan-accent-2: #5b4fe0;
+	--avyaan-accent-glow: rgba(0, 149, 217, 0.28);
+	--avyaan-ink: #1e293b;
+	--avyaan-muted: #64748b;
+	--avyaan-deep: #f8fafc;
+	--avyaan-heading: #0f172a;
+	--avyaan-heading-accent: linear-gradient(100deg, #0f172a 10%, #0369a1 55%, #4338ca 100%);
+	--avyaan-body-bg:
+		radial-gradient(1100px 520px at 14% -8%, rgba(0, 149, 217, 0.11), transparent 58%),
+		radial-gradient(820px 460px at 88% 6%, rgba(91, 79, 224, 0.09), transparent 52%),
+		linear-gradient(180deg, #f8fafc 0%, #f1f5f9 48%, #e8eef5 100%);
+	--avyaan-chrome-bg: linear-gradient(120deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 252, 0.9));
+	--avyaan-chrome-border: rgba(148, 163, 184, 0.32);
+	--avyaan-chrome-shadow: 0 12px 40px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+	--avyaan-nav-link: #475569;
+	--avyaan-nav-link-hover: #0f172a;
+	--avyaan-icon-fill: #64748b;
+	--avyaan-glass-bg: linear-gradient(165deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.86));
+	--avyaan-glass-border: rgba(148, 163, 184, 0.28);
+	--avyaan-glass-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+	--avyaan-card-bg: linear-gradient(165deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.9));
+	--avyaan-card-border: rgba(148, 163, 184, 0.24);
+	--avyaan-eyebrow: #0369a1;
+	--avyaan-lead: #475569;
+	--avyaan-btn-ghost-color: #334155;
+	--avyaan-btn-ghost-border: rgba(15, 23, 42, 0.12);
+	--avyaan-footer: #64748b;
+	--avyaan-drawer-backdrop: rgba(15, 23, 42, 0.35);
+	--avyaan-drawer-link-bg: rgba(255, 255, 255, 0.72);
+	--avyaan-drawer-link-border: rgba(148, 163, 184, 0.22);
+	--avyaan-orb-opacity: 0.35;
+	--avyaan-hero-frame-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.88));
+	--avyaan-hero-frame-border: rgba(148, 163, 184, 0.3);
+	--avyaan-hero-frame-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+	--avyaan-font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+	--avyaan-font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] {
+	--avyaan-accent: #00c2ff;
+	--avyaan-accent-2: #6d5efc;
+	--avyaan-accent-glow: rgba(0, 194, 255, 0.42);
+	--avyaan-ink: #f2f7ff;
+	--avyaan-muted: #9eb6d8;
+	--avyaan-deep: #050b1a;
+	--avyaan-heading: #f7fbff;
+	--avyaan-heading-accent: linear-gradient(100deg, #ffffff 10%, #8ad7ff 55%, #a99bff 100%);
+	--avyaan-body-bg:
+		radial-gradient(900px 480px at 18% -12%, rgba(0, 194, 255, 0.16), transparent 60%),
+		radial-gradient(720px 420px at 86% 4%, rgba(109, 94, 252, 0.12), transparent 55%),
+		linear-gradient(180deg, #050b1a 0%, #071223 38%, #060f1c 72%, #050b1a 100%);
+	--avyaan-chrome-bg: linear-gradient(120deg, rgba(10, 18, 40, 0.78), rgba(8, 14, 32, 0.52));
+	--avyaan-chrome-border: rgba(160, 200, 255, 0.16);
+	--avyaan-chrome-shadow: 0 18px 50px rgba(0, 6, 22, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	--avyaan-nav-link: #cfe0ff;
+	--avyaan-nav-link-hover: #fff;
+	--avyaan-icon-fill: #9fc6ff;
+	--avyaan-glass-bg: linear-gradient(165deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+	--avyaan-glass-border: rgba(160, 200, 255, 0.14);
+	--avyaan-glass-shadow: 0 18px 50px rgba(0, 8, 24, 0.24);
+	--avyaan-card-bg: linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015));
+	--avyaan-card-border: rgba(160, 200, 255, 0.12);
+	--avyaan-eyebrow: #7ec8ff;
+	--avyaan-lead: #9eb6d8;
+	--avyaan-btn-ghost-color: #d7e8ff;
+	--avyaan-btn-ghost-border: rgba(255, 255, 255, 0.14);
+	--avyaan-footer: #8eb0d8;
+	--avyaan-drawer-backdrop: rgba(2, 6, 18, 0.55);
+	--avyaan-drawer-link-bg: rgba(255, 255, 255, 0.03);
+	--avyaan-drawer-link-border: rgba(255, 255, 255, 0.06);
+	--avyaan-orb-opacity: 0.4;
+	--avyaan-hero-frame-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+	--avyaan-hero-frame-border: rgba(160, 200, 255, 0.14);
+	--avyaan-hero-frame-shadow: 0 30px 80px rgba(0, 20, 60, 0.35);
+}
+
+/* Light-mode overrides for legacy dark defaults in core.css / root.css */
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) body,
+html[data-layout="wide"]:not(.dark-mode) .avyaan-landing {
+	color: var(--avyaan-ink);
+}
+
+html[data-layout="wide"]:not(.dark-mode) h1,
+html[data-layout="wide"]:not(.dark-mode) h2,
+html[data-layout="wide"]:not(.dark-mode) h3 {
+	color: var(--avyaan-heading) !important;
+}
+
+html[data-layout="wide"]:not(.dark-mode) .avyaan-landing {
+	color: var(--avyaan-ink);
+}
+
+html[data-layout="wide"]:not(.dark-mode) #hero-title,
+html[data-layout="wide"]:not(.dark-mode) .avyaan-landing h1 {
+	color: var(--avyaan-heading);
+}
+
+html[data-layout="wide"]:not(.dark-mode) p.lead,
+html[data-layout="wide"]:not(.dark-mode) .avyaan-landing p.lead {
+	color: var(--avyaan-lead);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .card p,
+html[data-layout="wide"]:not(.dark-mode) .portfolio-case p,
+html[data-layout="wide"]:not(.dark-mode) .summary-body p,
+html[data-layout="wide"]:not(.dark-mode) .skill-card p,
+html[data-layout="wide"]:not(.dark-mode) .work-card p,
+html[data-layout="wide"]:not(.dark-mode) .case-body p,
+html[data-layout="wide"]:not(.dark-mode) .summary-highlights li,
+html[data-layout="wide"]:not(.dark-mode) .bio-card ul {
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .card,
+html[data-layout="wide"]:not(.dark-mode) .portfolio-case,
+html[data-layout="wide"]:not(.dark-mode) .skill-card,
+html[data-layout="wide"]:not(.dark-mode) .timeline-item,
+html[data-layout="wide"]:not(.dark-mode) .bio-card,
+html[data-layout="wide"]:not(.dark-mode) .work-card,
+html[data-layout="wide"]:not(.dark-mode) .contact-cta {
+	background: var(--avyaan-card-bg);
+	border-color: var(--avyaan-card-border);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .meta,
+html[data-layout="wide"]:not(.dark-mode) .contact-cta-sub,
+html[data-layout="wide"]:not(.dark-mode) .timeline-period,
+html[data-layout="wide"]:not(.dark-mode) .summary-role {
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .contact-cta-title,
+html[data-layout="wide"]:not(.dark-mode) .stat b {
+	color: var(--avyaan-heading);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .work-card h2,
+html[data-layout="wide"]:not(.dark-mode) .case-body h2 {
+	color: var(--avyaan-heading);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .work-card-tags li {
+	color: var(--avyaan-muted);
+	border-color: rgba(15, 23, 42, 0.12);
+	background: rgba(15, 23, 42, 0.04);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .case-back {
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .work-card-cta {
+	color: var(--avyaan-accent, #0284c7);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .btn.ghost {
+	color: var(--avyaan-btn-ghost-color);
+	border-color: var(--avyaan-btn-ghost-border);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .products .products-intro h2,
+html[data-layout="wide"]:not(.dark-mode) .products-list .product .product-name {
+	color: var(--avyaan-heading);
+}
+
+html[data-layout="wide"]:not(.dark-mode) .products .products-intro p,
+html[data-layout="wide"]:not(.dark-mode) .products-list .product-description {
+	color: var(--avyaan-muted);
+}
+
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .avyaan-nav-link:hover,
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .avyaan-nav-link:focus-visible,
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .avyaan-nav-link.is-active {
+	background: none;
+}
+
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) #search-button:hover,
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) #translate-button:hover,
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) #darkmode-button:hover,
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) #menu-button:hover {
+	background: rgba(15, 23, 42, 0.05);
+}
+
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) #theme-menu {
+	background: #fff;
+	border-color: rgba(148, 163, 184, 0.35);
+	box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+}
+
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .theme-option {
+	color: #475569;
+}
+
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .theme-option:hover,
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .theme-option:focus-visible {
+	background: #f1f5f9;
+	color: #0f172a;
+}
+
+html[data-layout="wide"][data-skin="glass"]:not(.dark-mode) .theme-option-active {
+	color: #0095d9;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] #theme-menu {
+	background: #222244;
+	border-color: #33335a;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] .theme-option {
+	color: #aaa;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] .theme-option:hover,
+html.dark-mode[data-layout="wide"][data-skin="glass"] .theme-option:focus-visible {
+	background: #2a2a4a;
+	color: #ddd;
+}
+
+html.dark-mode[data-layout="wide"][data-skin="glass"] .theme-option-active {
+	color: #69b7cf;
+}

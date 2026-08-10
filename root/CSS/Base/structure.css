@@ -1,3 +1,11 @@
 #main-wrapper {
     background: none;
 }
+
+html[data-layout="wide"][data-skin="glass"] #content-wrapper {
+	overflow: visible;
+}
+
+html[data-layout="wide"][data-skin="glass"] #content {
+	padding: 0;
+}

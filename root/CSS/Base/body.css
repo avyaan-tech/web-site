@@ -1,4 +1,9 @@
-h1,
-h3 {
-    color: #8d9091 !important;
+html.dark-mode[data-layout="wide"] h1,
+html.dark-mode[data-layout="wide"] h2,
+html.dark-mode[data-layout="wide"] h3 {
+	color: #e8f2ff !important;
+}
+
+html[data-layout="wide"] .avyaan-landing h2 {
+	font-family: "Plus Jakarta Sans", Inter, sans-serif;
 }

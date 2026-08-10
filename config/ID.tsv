@@ -1,3 +1,13 @@
 Status	Id	Label	Title	JS	Description
 published	root	Avyaan Tech	Avyaan Tech	1	Avyaan Technologies - innovation . ai . impact
-published	portfolio	Portfolio	Portfolio | Avyaan Tech	1	Selected work and solutions from Avyaan
+published	work	Work	Work | Avyaan Tech	1	Selected work and solutions from Avyaan
+published	work/pmsbeds	Property Management System	Property Management System | Avyaan Tech	1	Hotel-side PMS for mid-sized hotels with ElevenLabs voice agent
+published	work/wolo-code	Wolo Code	Wolo Code | Avyaan Tech	1	Three-word addressing platform
+published	work/mithra	Mithra	Mithra | Avyaan Tech	1	Health insights from multimodal personal data
+published	work/ai-evaluation	AI Evaluation	AI Evaluation Platform | Avyaan Tech	1	Automated handwritten answersheet evaluation
+published	work/wcode	WCode	WCode | Avyaan Tech	1	Word-based encoding and secure data exchange
+published	work/delivery-stack	Delivery Stack	Delivery Stack | Avyaan Tech	1	Kubernetes delivery platform for product squads
+published	work/digital-evaluation	Digital Evaluation	Digital Evaluation Platform | Avyaan Tech	1	OCR ICR and OMR evaluation pipelines
+published	work/edtech	EdTech	EdTech Platform | Avyaan Tech	1	Modular edtech with RAG-powered search
+published	work/ai-test-automation	AI Test Automation	AI Test Automation | Avyaan Tech	1	ML-assisted test automation consulting
+published	license	License	License | Avyaan Tech	1	Copyright and usage terms

@@ -1,0 +1,104 @@
+/* Scroll/entrance motion for Avyaan marketing surfaces */
+
+html[data-layout="wide"] .reveal {
+	opacity: 0;
+	transform: translateY(28px);
+	filter: blur(8px);
+	transition:
+		opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+		transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+		filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: var(--reveal-delay, 0ms);
+	will-change: opacity, transform, filter;
+}
+
+html[data-layout="wide"] .reveal.is-visible {
+	opacity: 1;
+	transform: none;
+	filter: none;
+}
+
+html[data-layout="wide"] .reveal-child {
+	opacity: 0;
+	transform: translateY(18px);
+	transition:
+		opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+		transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[data-layout="wide"] .reveal.is-visible .reveal-child {
+	opacity: 1;
+	transform: none;
+}
+
+html[data-layout="wide"] .reveal.is-visible .reveal-child:nth-child(1) { transition-delay: 40ms; }
+html[data-layout="wide"] .reveal.is-visible .reveal-child:nth-child(2) { transition-delay: 110ms; }
+html[data-layout="wide"] .reveal.is-visible .reveal-child:nth-child(3) { transition-delay: 180ms; }
+html[data-layout="wide"] .reveal.is-visible .reveal-child:nth-child(4) { transition-delay: 250ms; }
+html[data-layout="wide"] .reveal.is-visible .reveal-child:nth-child(5) { transition-delay: 320ms; }
+
+html[data-layout="wide"] .features .reveal:nth-child(1) { --reveal-delay: 0ms; }
+html[data-layout="wide"] .features .reveal:nth-child(2) { --reveal-delay: 60ms; }
+html[data-layout="wide"] .features .reveal:nth-child(3) { --reveal-delay: 120ms; }
+html[data-layout="wide"] .features .reveal:nth-child(4) { --reveal-delay: 180ms; }
+html[data-layout="wide"] .features .reveal:nth-child(5) { --reveal-delay: 240ms; }
+html[data-layout="wide"] .features .reveal:nth-child(6) { --reveal-delay: 300ms; }
+
+html[data-layout="wide"] .skills-grid .reveal:nth-child(1) { --reveal-delay: 0ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(2) { --reveal-delay: 50ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(3) { --reveal-delay: 100ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(4) { --reveal-delay: 150ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(5) { --reveal-delay: 200ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(6) { --reveal-delay: 250ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(7) { --reveal-delay: 300ms; }
+html[data-layout="wide"] .skills-grid .reveal:nth-child(8) { --reveal-delay: 350ms; }
+
+html[data-layout="wide"] .portfolio-showcase .reveal:nth-child(odd) { --reveal-delay: 40ms; }
+html[data-layout="wide"] .portfolio-showcase .reveal:nth-child(even) { --reveal-delay: 120ms; }
+
+html[data-layout="wide"] .work-grid .reveal:nth-child(1) { --reveal-delay: 0ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(2) { --reveal-delay: 50ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(3) { --reveal-delay: 100ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(4) { --reveal-delay: 150ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(5) { --reveal-delay: 200ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(6) { --reveal-delay: 250ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(7) { --reveal-delay: 300ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(8) { --reveal-delay: 350ms; }
+html[data-layout="wide"] .work-grid .reveal:nth-child(9) { --reveal-delay: 400ms; }
+
+html[data-layout="wide"] .card-icon,
+html[data-layout="wide"] .case-icon,
+html[data-layout="wide"] .work-card-icon {
+	transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+html[data-layout="wide"] .card:hover .card-icon,
+html[data-layout="wide"] .portfolio-case:hover .case-icon,
+html[data-layout="wide"] .work-card:hover .work-card-icon {
+	transform: scale(1.08) rotate(-4deg);
+	box-shadow: 0 0 24px rgba(0, 194, 255, 0.28);
+}
+
+html[data-layout="wide"] #canvas-main {
+	transition: opacity 0.45s ease, filter 0.45s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html[data-layout="wide"] .reveal,
+	html[data-layout="wide"] .reveal-child,
+	html[data-layout="wide"] .orb,
+	html[data-layout="wide"] .flow-line,
+	html[data-layout="wide"] .hero-image,
+	html[data-layout="wide"] .card,
+	html[data-layout="wide"] .skill-card,
+	html[data-layout="wide"] .portfolio-case,
+	html[data-layout="wide"] .btn,
+	html[data-layout="wide"] .card-icon,
+	html[data-layout="wide"] .case-icon {
+		animation: none !important;
+		transition: none !important;
+		filter: none !important;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+}

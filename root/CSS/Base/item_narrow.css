@@ -1,0 +1,6 @@
+@media (max-width:720px) {
+    .item_block_image {
+        width: 160px;
+        height: 110px;
+    }
+}
