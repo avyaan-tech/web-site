@@ -1,7 +1,7 @@
 @media (max-width:720px) {
     #hero-title .hero-line {
         display: block;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     #hero-title .hero-line+.hero-line {

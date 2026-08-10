@@ -247,7 +247,7 @@ html[data-layout="wide"][data-skin="glass"] .avyaan-nav-link.is-active::after {
 
 html[data-layout="wide"][data-skin="glass"] .avyaan-nav-actions {
 	justify-self: end;
-	align-self: start;
+	align-self: center;
 	float: none;
 	margin: 0;
 	padding: 0;
@@ -270,9 +270,15 @@ html[data-layout="wide"][data-skin="glass"] #search-button,
 html[data-layout="wide"][data-skin="glass"] #translate-button,
 html[data-layout="wide"][data-skin="glass"] #darkmode-button,
 html[data-layout="wide"][data-skin="glass"] #menu-button {
-	margin: 0;
+	/* Beat framework Media.css / Menu_button.css margins so icons share one row */
+	margin: 0 !important;
+	float: none;
 	width: 36px;
 	height: 36px;
+	padding: 0;
+	box-sizing: border-box;
+	appearance: none;
+	-webkit-appearance: none;
 	border-radius: 999px;
 	display: inline-grid;
 	place-items: center;
@@ -809,6 +815,7 @@ html[data-layout="wide"] .avyaan-landing .hero-left {
 	justify-self: start;
 	max-width: none;
 	width: 100%;
+	min-width: 0;
 }
 
 html[data-layout="wide"] .avyaan-landing #hero-title,
@@ -920,6 +927,7 @@ html[data-layout="wide"] .avyaan-landing .hero-visual {
 html[data-layout="wide"] .hero-visual-frame {
 	position: relative;
 	width: min(100%, 540px);
+	max-width: 100%;
 	margin-inline: auto;
 	padding: 0.85rem;
 	border-radius: 28px;
@@ -927,6 +935,7 @@ html[data-layout="wide"] .hero-visual-frame {
 	border: 1px solid var(--avyaan-hero-frame-border);
 	box-shadow: var(--avyaan-hero-frame-shadow);
 	overflow: hidden;
+	box-sizing: border-box;
 }
 
 html[data-layout="wide"] .hero-visual-frame::before {
@@ -1210,21 +1219,35 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 	}
 
 	html[data-layout="wide"] .avyaan-landing .hero:has(.hero-visual) {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		min-height: 0;
 	}
 
+	html[data-layout="wide"] .avyaan-landing .hero-line {
+		white-space: normal;
+	}
+
+	html[data-layout="wide"] .avyaan-landing .cta-row {
+		justify-content: center;
+	}
+
 	html[data-layout="wide"] #work .work-cover {
+		/* Match wrap padding-top clamp so cover bottom aligns with atmosphere */
 		min-height: calc(
 			100svh
 			- var(--avyaan-header-offset, 3.75rem)
-			- clamp(1.25rem, 4vw, 2.5rem)
+			- clamp(2rem, 5vw, 3.5rem)
 		);
-		padding-bottom: 0.75rem;
+		padding-bottom: 1.25rem;
+	}
+
+	html[data-layout="wide"] #work .work-meta {
+		margin-top: 1rem;
+		padding-bottom: 0.35rem;
 	}
 
 	html[data-layout="wide"] .avyaan-landing #work-hero {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		min-height: 0;
 		padding-top: 0.75rem;
 		padding-bottom: 1rem;
@@ -1233,6 +1256,7 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 	html[data-layout="wide"] .avyaan-landing #work-hero .hero-left {
 		justify-content: flex-start;
 		gap: 0;
+		padding-inline: 0;
 	}
 
 	html[data-layout="wide"] .avyaan-landing #work-hero .hero-copy {
@@ -1244,17 +1268,19 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 	}
 
 	html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears {
-		width: min(100%, 280px);
+		width: min(100%, 220px);
+		margin-inline: auto;
 	}
 
 	html[data-layout="wide"] .avyaan-landing .hero-visual {
 		justify-content: center;
 		order: -1;
-		padding-inline: clamp(0.75rem, 5vw, 2rem);
+		padding-inline: 0;
 	}
 
 	html[data-layout="wide"] .avyaan-landing #work-hero .hero-visual {
 		order: 0;
+		justify-content: center;
 		padding-inline: 0;
 	}
 
@@ -1281,7 +1307,20 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 	html[data-layout="wide"] .avyaan-landing #hero-title,
 	html[data-layout="wide"] .avyaan-landing #work-title,
 	html[data-layout="wide"] .avyaan-landing #case-title {
-		font-size: clamp(2rem, 10vw, 2.7rem);
+		font-size: clamp(1.55rem, 7.5vw, 2.35rem);
+	}
+
+	html[data-layout="wide"] .avyaan-landing .cta-row {
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	html[data-layout="wide"] .avyaan-landing .cta-row .btn {
+		width: min(100%, 20rem);
+		text-align: center;
+		box-sizing: border-box;
 	}
 }
 
