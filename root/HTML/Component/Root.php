@@ -37,8 +37,8 @@
 				</div>
 				<div class="hero-visual reveal-child">
 					<div class="hero-visual-frame">
-						<img src="/hero_light.svg" alt="Illustration of a human interacting with a digital interface, representing the integration of technology and human-centered design." class="hero-image hero-image-light" />
-						<img src="/hero_dark.svg" alt="" class="hero-image hero-image-dark" aria-hidden="true" />
+						<img src="/hero_light.svg?v=20260810" alt="Illustration of a human interacting with a digital interface, representing the integration of technology and human-centered design." class="hero-image hero-image-light" />
+						<img src="/hero_dark.svg?v=20260810" alt="" class="hero-image hero-image-dark" aria-hidden="true" />
 					</div>
 				</div>
 			</section>
