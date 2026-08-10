@@ -39,7 +39,7 @@
 					</div>
 				</header>
 
-				<div class="work-meta meta reveal" data-reveal>
+				<div class="work-meta meta">
 					<span>AI, automation, and platform engineering</span>
 					<span>&mdash;</span>
 					<span>from discovery sprints to global rollouts</span>
