@@ -159,6 +159,27 @@ html[data-layout="wide"]:not(.dark-mode) .work-card-cta {
 	color: var(--avyaan-accent, #0284c7);
 }
 
+html[data-layout="wide"]:not(.dark-mode) .portfolio-case .case-icon:not(.external-icon),
+html[data-layout="wide"]:not(.dark-mode) .work-card-icon:not(.work-card-icon--logo),
+html[data-layout="wide"]:not(.dark-mode) .card-icon {
+	color: #0284c7;
+}
+
+html[data-layout="wide"]:not(.dark-mode) .portfolio-case .case-icon:not(.external-icon) svg,
+html[data-layout="wide"]:not(.dark-mode) .work-card-icon:not(.work-card-icon--logo) svg,
+html[data-layout="wide"]:not(.dark-mode) .card-icon svg {
+	stroke: currentColor;
+	color: inherit;
+}
+
+html[data-layout="wide"]:not(.dark-mode) #work .portfolio-case .case-icon:not(.external-icon) {
+	color: #0369a1;
+	background: linear-gradient(145deg, rgba(14, 165, 233, 0.22), rgba(59, 130, 246, 0.14));
+	box-shadow:
+		0 0 0 1px rgba(14, 165, 233, 0.28),
+		0 12px 28px rgba(14, 116, 180, 0.14);
+}
+
 html[data-layout="wide"]:not(.dark-mode) .btn.ghost {
 	color: var(--avyaan-btn-ghost-color);
 	border-color: var(--avyaan-btn-ghost-border);

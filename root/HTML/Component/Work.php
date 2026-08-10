@@ -175,7 +175,7 @@
 				<article class="bio-card">
 					<h3>Recognitions</h3>
 					<ul>
-						<li>2018 - Prior art acknowledgement for word-based location codes (Patent WO2014170646A1) — Ujjwal Singh</li>
+						<li>2018 - Prior art acknowledgement for word-based location codes (<a class="case-link" href="https://patents.google.com/patent/WO2014170646A1#:~:text=by%20third%20party-,Non%2DPatent%20Citations%20(2),-Title" target="_blank" rel="noopener noreferrer">Patent WO2014170646A1</a>) — Ujjwal Singh</li>
 					</ul>
 				</article>
 			</section>

@@ -174,11 +174,14 @@ a.portfolio-case {
     border-radius: 50%;
     background: rgba(0, 179, 255, 0.12);
     box-shadow: 0 0 30px rgba(0, 179, 255, 0.12);
+    color: #7fd0ff;
 }
 
 .portfolio-case .case-icon svg {
     width: 56px;
     height: 56px;
+    stroke: currentColor;
+    color: inherit;
 }
 
 .portfolio-case .case-content {
@@ -730,11 +733,14 @@ a.portfolio-case {
     border-radius: 50%;
     background: rgba(0, 179, 255, 0.12);
     box-shadow: 0 0 24px rgba(0, 179, 255, 0.1);
+    color: #7fd0ff;
 }
 
 .work-card-icon svg {
     width: 36px;
     height: 36px;
+    stroke: currentColor;
+    color: inherit;
 }
 
 .work-card-icon--logo {

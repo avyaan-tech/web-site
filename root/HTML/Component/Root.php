@@ -227,7 +227,7 @@
 					<span class="contact-cta-sub">Tell us about your vision — we'll propose a pragmatic plan</span>
 				</div>
 				<div class="contact-cta-actions">
-					<button class="btn" data-scroll-target="contact">Contact us</button>
+					<a class="btn btn-email" href="#" rel="nofollow" data-email-user="contact" data-email-domain="avyaan.tech"><span class="btn-icon" aria-hidden="true"><?php includeSVG('Icon', 'email'); ?></span>Contact us</a>
 					<a class="btn ghost XURL" href="/work" data-target="work" data-title="Work">View all work</a>
 				</div>
 			</section>

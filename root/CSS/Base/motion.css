@@ -75,7 +75,7 @@ html[data-layout="wide"] .work-card-icon {
 html[data-layout="wide"] .card:hover .card-icon,
 html[data-layout="wide"] .portfolio-case:hover .case-icon,
 html[data-layout="wide"] .work-card:hover .work-card-icon {
-	transform: scale(1.08) rotate(-4deg);
+	transform: scale(1.08);
 	box-shadow: 0 0 24px rgba(0, 194, 255, 0.28);
 }
 
