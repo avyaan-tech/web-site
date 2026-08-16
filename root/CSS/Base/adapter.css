@@ -1086,6 +1086,10 @@ html[data-layout="wide"] .avyaan-landing .hero-visual img {
 	animation: avyaan-float 7s ease-in-out infinite;
 }
 
+html[data-layout="wide"] #landing .hero-visual img {
+	animation: avyaan-hero-float 7s ease-in-out infinite;
+}
+
 html[data-layout="wide"] .avyaan-landing .hero-visual .hero-image-dark {
 	display: none;
 }
