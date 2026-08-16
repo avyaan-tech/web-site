@@ -2,8 +2,8 @@
 	<div class='avyaan-drawer-backdrop' data-drawer-close='true'></div>
 	<div id='nav-menu_container' class='avyaan-drawer-panel glass-strong'>
 		<div class='avyaan-drawer-head'>
-			<span class='avyaan-drawer-kicker'>Navigate</span>
 			<strong class='avyaan-drawer-title'>Avyaan</strong>
+			<span class='avyaan-drawer-kicker'>Navigate</span>
 		</div>
 		<nav class='avyaan-drawer-nav' aria-label='Site'>
 			<a class='avyaan-drawer-link XURL' href='/' data-target='root' data-title='' data-home-nav>

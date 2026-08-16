@@ -21,35 +21,37 @@
 
 		<div class="grid layout-rail">
 
-			<section class="hero reveal" id="hero" data-section="hero" data-reveal>
-				<div class="hero-left">
-					<h1 id="hero-title">
-						<span class="hero-line reveal-child">Human-centered Tech</span>
-						<span class="hero-line reveal-child">Engineered for scale</span>
-					</h1>
-					<p class="lead reveal-child">
-						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise
-					</p>
-					<div class="cta-row reveal-child">
-						<button class="btn" data-scroll-target="contact">Start a conversation</button>
-						<a class="btn ghost XURL" href="/work" data-target="work" data-title="Work">View our work</a>
+			<section class="home-cover" aria-label="Introduction">
+				<section class="hero reveal" id="hero" data-section="hero" data-reveal>
+					<div class="hero-left">
+						<h1 id="hero-title">
+							<span class="hero-line reveal-child">Human-centered Tech</span>
+							<span class="hero-line reveal-child">Engineered for scale</span>
+						</h1>
+						<p class="lead reveal-child">
+							We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise
+						</p>
+						<div class="cta-row reveal-child">
+							<button class="btn" data-scroll-target="contact">Start a conversation</button>
+							<a class="btn ghost XURL" href="/work" data-target="work" data-title="Work">View our work</a>
+						</div>
 					</div>
-				</div>
-				<div class="hero-visual reveal-child">
-					<div class="hero-visual-frame">
-						<img src="/hero_light.svg?v=20260810" alt="Illustration of a human interacting with a digital interface, representing the integration of technology and human-centered design." class="hero-image hero-image-light" />
-						<img src="/hero_dark.svg?v=20260810" alt="" class="hero-image hero-image-dark" aria-hidden="true" />
+					<div class="hero-visual reveal-child">
+						<div class="hero-visual-frame">
+							<img src="/hero_light.svg?v=20260810" alt="Illustration of a human interacting with a digital interface, representing the integration of technology and human-centered design." class="hero-image hero-image-light" />
+							<img src="/hero_dark.svg?v=20260810" alt="" class="hero-image hero-image-dark" aria-hidden="true" />
+						</div>
 					</div>
-				</div>
+				</section>
+
+				<section class="trust-bar" aria-label="Social proof">
+					<div class="meta">
+						<div class="trust-unfurl">Trusted by <strong>enterprises</strong> &amp; small teams.</div>
+					</div>
+				</section>
 			</section>
 
-			<section class="trust-bar reveal" aria-label="Social proof" data-reveal>
-				<div class="meta">
-					<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
-				</div>
-			</section>
-
-			<section id="about" class="profile-summary reveal" aria-label="Company overview" data-section="about" data-reveal>
+			<section id="about" class="profile-summary" aria-label="Company overview" data-section="about">
 				<div class="summary-body">
 					<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
 					<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
@@ -58,8 +60,8 @@
 
 			<section id="services" class="services-section" aria-label="Services" data-section="services">
 				<header class="section-head reveal" data-reveal>
-					<p class="eyebrow">What we build</p>
 					<h2>Core Capabilities</h2>
+					<p class="eyebrow">What we build</p>
 				</header>
 
 				<section class="features" aria-label="Capabilities">
@@ -108,18 +110,19 @@
 				</section>
 			</section>
 
-			<header class="section-head reveal" data-reveal>
-				<p class="eyebrow">Where we explore</p>
-				<h2>Our Interests</h2>
-			</header>
+			<section id="interests" class="interests-section" aria-label="Research interests" data-section="interests">
+				<header class="section-head reveal" data-reveal>
+					<h2>Our Interests</h2>
+					<p class="eyebrow">Where we explore</p>
+				</header>
 
-			<section class="profile-summary reveal" aria-label="Research interests overview" data-reveal>
-				<div class="summary-body">
-					<p>Areas we explore deeply — where engineering meets research, and ideas turn into working systems.</p>
-				</div>
-			</section>
+				<section class="profile-summary reveal" aria-label="Research interests overview" data-reveal>
+					<div class="summary-body">
+						<p>Areas we explore deeply — where engineering meets research, and ideas turn into working systems.</p>
+					</div>
+				</section>
 
-			<section class="features" aria-label="Research interests">
+				<section class="features" aria-label="Research interests">
 				<article class="card reveal" data-reveal data-category="research" data-tags="agents,autonomy,reasoning">
 					<h3>
 						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'ai_agents'); ?></span>
@@ -162,12 +165,13 @@
 					</h3>
 					<p>Researching concurrency, deterministic computation, and energy-aware scaling as foundation for next-generation compute.</p>
 				</article>
+				</section>
 			</section>
 
 			<section id="portfolio" class="portfolio-section reveal" data-section="portfolio" aria-label="Featured work" data-reveal>
 				<header class="section-head">
-					<p class="eyebrow">Selected work</p>
 					<h2>Portfolio</h2>
+					<p class="eyebrow">Selected work</p>
 				</header>
 				<div class="portfolio-showcase portfolio-showcase--featured" aria-label="Featured projects">
 					<article class="portfolio-case reveal" data-reveal data-tags="ai,ocr">
@@ -209,8 +213,8 @@
 
 			<section id="contact" class="contact-section reveal" data-section="contact" aria-label="Contact" data-reveal>
 				<header class="section-head">
-					<p class="eyebrow">Get in touch</p>
 					<h2>Contact</h2>
+					<p class="eyebrow">Get in touch</p>
 				</header>
 				<div class="contact-body">
 					<p>Tell us about your project, partnership idea, or question — we typically respond within one business day.</p>

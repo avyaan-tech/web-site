@@ -83,6 +83,19 @@ html[data-layout="wide"] #canvas-main {
 	transition: opacity 0.45s ease, filter 0.45s ease !important;
 }
 
+/* Home trust bar: left-to-right unfurl on load (not scroll-reveal) */
+html[data-layout="wide"] #landing .home-cover > .trust-bar .trust-unfurl {
+	display: block;
+	max-width: 100%;
+	animation: avyaan-trust-unfurl 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+	will-change: clip-path;
+}
+
+@keyframes avyaan-trust-unfurl {
+	from { clip-path: inset(0 100% 0 0); }
+	to { clip-path: inset(0 0 0 0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html[data-layout="wide"] .reveal,
 	html[data-layout="wide"] .reveal-child,
@@ -100,5 +113,14 @@ html[data-layout="wide"] #canvas-main {
 		filter: none !important;
 		transform: none !important;
 		opacity: 1 !important;
+	}
+
+	html[data-layout="wide"] .work-hero-gears svg .work-gear {
+		animation: none !important;
+	}
+
+	html[data-layout="wide"] #landing .home-cover > .trust-bar .trust-unfurl {
+		animation: none !important;
+		clip-path: none !important;
 	}
 }
