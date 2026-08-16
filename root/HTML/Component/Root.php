@@ -110,18 +110,19 @@
 				</section>
 			</section>
 
-			<header class="section-head reveal" data-reveal>
-				<h2>Our Interests</h2>
-				<p class="eyebrow">Where we explore</p>
-			</header>
+			<section id="interests" class="interests-section" aria-label="Research interests" data-section="interests">
+				<header class="section-head reveal" data-reveal>
+					<h2>Our Interests</h2>
+					<p class="eyebrow">Where we explore</p>
+				</header>
 
-			<section class="profile-summary reveal" aria-label="Research interests overview" data-reveal>
-				<div class="summary-body">
-					<p>Areas we explore deeply — where engineering meets research, and ideas turn into working systems.</p>
-				</div>
-			</section>
+				<section class="profile-summary reveal" aria-label="Research interests overview" data-reveal>
+					<div class="summary-body">
+						<p>Areas we explore deeply — where engineering meets research, and ideas turn into working systems.</p>
+					</div>
+				</section>
 
-			<section class="features" aria-label="Research interests">
+				<section class="features" aria-label="Research interests">
 				<article class="card reveal" data-reveal data-category="research" data-tags="agents,autonomy,reasoning">
 					<h3>
 						<span class="card-icon" aria-hidden="true"><?php includeSVG('Icon', 'ai_agents'); ?></span>
@@ -164,6 +165,7 @@
 					</h3>
 					<p>Researching concurrency, deterministic computation, and energy-aware scaling as foundation for next-generation compute.</p>
 				</article>
+				</section>
 			</section>
 
 			<section id="portfolio" class="portfolio-section reveal" data-section="portfolio" aria-label="Featured work" data-reveal>
