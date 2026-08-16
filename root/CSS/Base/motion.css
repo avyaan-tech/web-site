@@ -123,4 +123,9 @@ html[data-layout="wide"] #landing .home-cover > .trust-bar .trust-unfurl {
 		animation: none !important;
 		clip-path: none !important;
 	}
+
+	html[data-layout="wide"] #landing .hero-visual-frame {
+		animation: none !important;
+		transform: none !important;
+	}
 }
