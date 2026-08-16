@@ -1086,12 +1086,7 @@ html[data-layout="wide"] .avyaan-landing .hero-visual img {
 	animation: avyaan-float 7s ease-in-out infinite;
 }
 
-/* Home: float the whole hero frame (not img — clearer motion, avoids reduced-motion on .hero-image) */
 html[data-layout="wide"] #landing .hero-visual img {
-	animation: none;
-}
-
-html[data-layout="wide"] #landing .hero-visual-frame {
 	animation: avyaan-hero-float 7s ease-in-out infinite;
 	will-change: transform;
 }
@@ -1484,8 +1479,8 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 }
 
 @keyframes avyaan-hero-float {
-	0%, 100% { transform: translateY(22px); }
-	50% { transform: translateY(-6px); }
+	0%, 100% { transform: translateY(6px); }
+	50% { transform: translateY(-4px); }
 }
 
 @keyframes avyaan-gear-large {
