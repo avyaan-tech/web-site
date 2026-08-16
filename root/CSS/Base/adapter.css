@@ -626,10 +626,7 @@ html[data-layout="wide"] #landing .home-cover > .hero:has(.hero-visual) {
 	padding-bottom: clamp(1rem, 3vh, 2rem);
 }
 
-html[data-layout="wide"] #landing .home-bottom-meta {
-	display: flex;
-	flex-direction: column;
-	gap: clamp(0.75rem, 2vh, 1.15rem);
+html[data-layout="wide"] #landing .home-cover > .trust-bar {
 	margin: auto 0 0;
 	width: 100%;
 }

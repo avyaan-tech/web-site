@@ -44,19 +44,17 @@
 					</div>
 				</section>
 
-				<div class="home-bottom-meta">
-					<section class="trust-bar reveal" aria-label="Social proof" data-reveal>
-						<div class="meta">
-							<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
-						</div>
-					</section>
+				<section class="trust-bar reveal" aria-label="Social proof" data-reveal>
+					<div class="meta">
+						<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
+					</div>
+				</section>
+			</section>
 
-					<section id="about" class="profile-summary reveal" aria-label="Company overview" data-section="about" data-reveal>
-						<div class="summary-body">
-							<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
-							<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
-						</div>
-					</section>
+			<section id="about" class="profile-summary" aria-label="Company overview" data-section="about">
+				<div class="summary-body">
+					<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
+					<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
 				</div>
 			</section>
 
