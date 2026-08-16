@@ -46,7 +46,7 @@
 
 				<section class="trust-bar" aria-label="Social proof">
 					<div class="meta">
-						<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
+						<div class="trust-unfurl">Trusted by <strong>enterprises</strong> &amp; small teams.</div>
 					</div>
 				</section>
 			</section>
