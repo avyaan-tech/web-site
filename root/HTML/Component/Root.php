@@ -44,7 +44,7 @@
 					</div>
 				</section>
 
-				<section class="trust-bar reveal" aria-label="Social proof" data-reveal>
+				<section class="trust-bar" aria-label="Social proof">
 					<div class="meta">
 						<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
 					</div>
