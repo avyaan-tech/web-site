@@ -1315,6 +1315,51 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 }
 
 @media (max-width: 1100px) {
+	/* Home hero: stack copy above image — never float visual over the title */
+	html[data-layout="wide"] #landing .hero:has(.hero-visual) {
+		grid-template-columns: minmax(0, 1fr);
+		align-items: stretch;
+		min-height: 0;
+		gap: clamp(1.25rem, 3.5vw, 2rem);
+	}
+
+	html[data-layout="wide"] #landing .hero-left {
+		order: 0;
+		position: relative;
+		z-index: 2;
+		min-width: 0;
+	}
+
+	html[data-layout="wide"] #landing .hero-visual {
+		order: 1;
+		position: relative;
+		z-index: 1;
+		margin-top: 0;
+		padding-inline: 0;
+		justify-content: center;
+	}
+
+	html[data-layout="wide"] #landing .hero-visual-frame {
+		width: min(100%, 480px);
+		max-height: min(40vh, 300px);
+	}
+
+	html[data-layout="wide"] #landing .hero-visual img {
+		max-height: min(36vh, 260px);
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	html[data-layout="wide"] #landing .home-cover {
+		min-height: 0;
+		justify-content: flex-start;
+	}
+
+	html[data-layout="wide"] #landing .home-cover > .hero:has(.hero-visual) {
+		flex: 0 1 auto;
+	}
+
 	html[data-layout="wide"] .avyaan-landing .skills-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1371,11 +1416,6 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 	}
 
 	html[data-layout="wide"] #landing .home-cover {
-		min-height: calc(
-			100svh
-			- var(--avyaan-header-offset, 3.75rem)
-			- clamp(2rem, 5vw, 3.5rem)
-		);
 		padding-bottom: 1.25rem;
 	}
 
@@ -1383,16 +1423,6 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 		min-height: 0;
 		padding-top: 0.75rem;
 		padding-bottom: 1rem;
-		gap: clamp(1.35rem, 4vw, 2.25rem);
-	}
-
-	html[data-layout="wide"] #landing .hero-left {
-		order: 0;
-	}
-
-	html[data-layout="wide"] #landing .hero-visual {
-		order: 1;
-		margin-top: 0;
 	}
 
 	html[data-layout="wide"] #work .work-meta {
@@ -1428,7 +1458,6 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 
 	html[data-layout="wide"] .avyaan-landing .hero-visual {
 		justify-content: center;
-		order: -1;
 		padding-inline: 0;
 	}
 
