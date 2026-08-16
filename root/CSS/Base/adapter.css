@@ -377,6 +377,7 @@ html[data-layout="wide"][data-skin="glass"] .pml-open #canvas-main {
 html[data-layout="wide"][data-skin="glass"] .avyaan-drawer-kicker {
 	display: block;
 	margin-top: 0.35rem;
+	padding-inline-start: 20px;
 	font-size: 0.75rem;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
@@ -625,6 +626,7 @@ html[data-layout="wide"] #landing .interests-section .features {
 
 html[data-layout="wide"] .avyaan-landing .eyebrow {
 	margin: 0.65rem 0 0;
+	padding-inline-start: 20px;
 	font-size: 0.78rem;
 	font-weight: 700;
 	letter-spacing: 0.16em;
