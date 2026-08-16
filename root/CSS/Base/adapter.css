@@ -599,6 +599,41 @@ html[data-layout="wide"] #work .avyaan-atmosphere {
 	max-height: none;
 }
 
+/* Home: first-screen cover — mirror /work viewport treatment */
+html[data-layout="wide"] #landing .avyaan-atmosphere {
+	bottom: auto;
+	height: 100svh;
+	max-height: none;
+}
+
+html[data-layout="wide"] #landing .home-cover {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: calc(
+		100svh
+		- var(--avyaan-header-offset, 3.75rem)
+		- clamp(2rem, 5vw, 3.5rem)
+	);
+	padding-bottom: clamp(1rem, 2.5vh, 1.75rem);
+}
+
+html[data-layout="wide"] #landing .home-cover > .hero:has(.hero-visual) {
+	min-height: 0;
+	flex: 1 1 auto;
+	padding-top: clamp(1rem, 3vh, 2rem);
+	padding-bottom: clamp(1rem, 3vh, 2rem);
+}
+
+html[data-layout="wide"] #landing .home-bottom-meta {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.75rem, 2vh, 1.15rem);
+	margin: auto 0 0;
+	width: 100%;
+}
+
 html[data-layout="wide"] #work .work-cover {
 	display: flex;
 	flex-direction: column;
@@ -680,8 +715,19 @@ html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears {
 	width: min(100%, 340px);
 	margin-inline: 0 0;
 	line-height: 0;
-	/* Soft float only — continuous gear spin reads as template gimmick */
 	animation: avyaan-float 8s ease-in-out infinite;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears svg .work-gear--large {
+	transform-box: fill-box;
+	transform-origin: center;
+	animation: avyaan-gear-large 120s linear infinite;
+}
+
+html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears svg .work-gear--small {
+	transform-box: fill-box;
+	transform-origin: center;
+	animation: avyaan-gear-small 80s linear infinite;
 }
 
 html[data-layout="wide"] .avyaan-landing #work-hero .work-hero-gears svg {
@@ -1241,6 +1287,21 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 		padding-bottom: 1.25rem;
 	}
 
+	html[data-layout="wide"] #landing .home-cover {
+		min-height: calc(
+			100svh
+			- var(--avyaan-header-offset, 3.75rem)
+			- clamp(2rem, 5vw, 3.5rem)
+		);
+		padding-bottom: 1.25rem;
+	}
+
+	html[data-layout="wide"] #landing .home-cover > .hero:has(.hero-visual) {
+		min-height: 0;
+		padding-top: 0.75rem;
+		padding-bottom: 1rem;
+	}
+
 	html[data-layout="wide"] #work .work-meta {
 		margin-top: 1rem;
 		padding-bottom: 0.35rem;
@@ -1332,6 +1393,16 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 @keyframes avyaan-float {
 	0%, 100% { transform: translateY(0); }
 	50% { transform: translateY(-10px); }
+}
+
+@keyframes avyaan-gear-large {
+	from { transform: translate(94px, 96px) rotate(0deg); }
+	to { transform: translate(94px, 96px) rotate(360deg); }
+}
+
+@keyframes avyaan-gear-small {
+	from { transform: translate(156px, 148px) rotate(11.25deg); }
+	to { transform: translate(156px, 148px) rotate(-348.75deg); }
 }
 
 @keyframes avyaan-flow {

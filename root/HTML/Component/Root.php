@@ -21,38 +21,42 @@
 
 		<div class="grid layout-rail">
 
-			<section class="hero reveal" id="hero" data-section="hero" data-reveal>
-				<div class="hero-left">
-					<h1 id="hero-title">
-						<span class="hero-line reveal-child">Human-centered Tech</span>
-						<span class="hero-line reveal-child">Engineered for scale</span>
-					</h1>
-					<p class="lead reveal-child">
-						We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise
-					</p>
-					<div class="cta-row reveal-child">
-						<button class="btn" data-scroll-target="contact">Start a conversation</button>
-						<a class="btn ghost XURL" href="/work" data-target="work" data-title="Work">View our work</a>
+			<section class="home-cover" aria-label="Introduction">
+				<section class="hero reveal" id="hero" data-section="hero" data-reveal>
+					<div class="hero-left">
+						<h1 id="hero-title">
+							<span class="hero-line reveal-child">Human-centered Tech</span>
+							<span class="hero-line reveal-child">Engineered for scale</span>
+						</h1>
+						<p class="lead reveal-child">
+							We design intelligent systems that augment teams, automate critical workflows, and make data instantly usable — without the noise
+						</p>
+						<div class="cta-row reveal-child">
+							<button class="btn" data-scroll-target="contact">Start a conversation</button>
+							<a class="btn ghost XURL" href="/work" data-target="work" data-title="Work">View our work</a>
+						</div>
 					</div>
-				</div>
-				<div class="hero-visual reveal-child">
-					<div class="hero-visual-frame">
-						<img src="/hero_light.svg?v=20260810" alt="Illustration of a human interacting with a digital interface, representing the integration of technology and human-centered design." class="hero-image hero-image-light" />
-						<img src="/hero_dark.svg?v=20260810" alt="" class="hero-image hero-image-dark" aria-hidden="true" />
+					<div class="hero-visual reveal-child">
+						<div class="hero-visual-frame">
+							<img src="/hero_light.svg?v=20260810" alt="Illustration of a human interacting with a digital interface, representing the integration of technology and human-centered design." class="hero-image hero-image-light" />
+							<img src="/hero_dark.svg?v=20260810" alt="" class="hero-image hero-image-dark" aria-hidden="true" />
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
-			<section class="trust-bar reveal" aria-label="Social proof" data-reveal>
-				<div class="meta">
-					<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
-				</div>
-			</section>
+				<div class="home-bottom-meta">
+					<section class="trust-bar reveal" aria-label="Social proof" data-reveal>
+						<div class="meta">
+							<div>Trusted by <strong>enterprises</strong> &amp; small teams.</div>
+						</div>
+					</section>
 
-			<section id="about" class="profile-summary reveal" aria-label="Company overview" data-section="about" data-reveal>
-				<div class="summary-body">
-					<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
-					<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
+					<section id="about" class="profile-summary reveal" aria-label="Company overview" data-section="about" data-reveal>
+						<div class="summary-body">
+							<p>We are a technology company delivering intelligent platforms, automation, and data systems for enterprises and fast-moving ventures. Our work blends architectural rigor with hands-on execution across cloud, mobile, web, and AI-first experiences.</p>
+							<p>Delivering resilient systems, guiding organisations through digital transformation, and ensuring impactful outcomes.</p>
+						</div>
+					</section>
 				</div>
 			</section>
 
