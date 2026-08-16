@@ -60,8 +60,8 @@
 
 			<section id="services" class="services-section" aria-label="Services" data-section="services">
 				<header class="section-head reveal" data-reveal>
-					<p class="eyebrow">What we build</p>
 					<h2>Core Capabilities</h2>
+					<p class="eyebrow">What we build</p>
 				</header>
 
 				<section class="features" aria-label="Capabilities">
@@ -111,8 +111,8 @@
 			</section>
 
 			<header class="section-head reveal" data-reveal>
-				<p class="eyebrow">Where we explore</p>
 				<h2>Our Interests</h2>
+				<p class="eyebrow">Where we explore</p>
 			</header>
 
 			<section class="profile-summary reveal" aria-label="Research interests overview" data-reveal>
@@ -168,8 +168,8 @@
 
 			<section id="portfolio" class="portfolio-section reveal" data-section="portfolio" aria-label="Featured work" data-reveal>
 				<header class="section-head">
-					<p class="eyebrow">Selected work</p>
 					<h2>Portfolio</h2>
+					<p class="eyebrow">Selected work</p>
 				</header>
 				<div class="portfolio-showcase portfolio-showcase--featured" aria-label="Featured projects">
 					<article class="portfolio-case reveal" data-reveal data-tags="ai,ocr">
@@ -211,8 +211,8 @@
 
 			<section id="contact" class="contact-section reveal" data-section="contact" aria-label="Contact" data-reveal>
 				<header class="section-head">
-					<p class="eyebrow">Get in touch</p>
 					<h2>Contact</h2>
+					<p class="eyebrow">Get in touch</p>
 				</header>
 				<div class="contact-body">
 					<p>Tell us about your project, partnership idea, or question — we typically respond within one business day.</p>
