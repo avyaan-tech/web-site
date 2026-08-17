@@ -1399,13 +1399,14 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 		object-fit: contain;
 	}
 
+	/* Keep first-screen viewport fill; shrink hero image instead of collapsing cover */
 	html[data-layout="wide"] #landing .home-cover {
-		min-height: 0;
 		justify-content: flex-start;
 	}
 
 	html[data-layout="wide"] #landing .home-cover > .hero:has(.hero-visual) {
-		flex: 0 1 auto;
+		flex: 1 1 auto;
+		min-height: 0;
 	}
 }
 
