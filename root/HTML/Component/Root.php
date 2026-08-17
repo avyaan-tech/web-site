@@ -220,7 +220,7 @@
 					<p>Tell us about your project, partnership idea, or question — we typically respond within one business day.</p>
 					<p class="contact-email-line">
 						Email us at
-						<a class="contact-mail-link" href="#" rel="nofollow" data-email-user="contact" data-email-domain="avyaan.tech"><span class="contact-mail-text">contact<span aria-hidden="true">&#64;</span>avyaan.tech</span></a>
+						<a class="contact-mail-link" href="#" rel="nofollow" data-email-user="hello" data-email-domain="avyaan.tech"><span class="contact-mail-text">hello<span aria-hidden="true">&#64;</span>avyaan.tech</span></a>
 					</p>
 				</div>
 			</section>

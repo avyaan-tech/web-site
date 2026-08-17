@@ -668,15 +668,16 @@ html[data-layout="wide"] .avyaan-landing .hero:has(.hero-visual) {
 
 /* Home hero: stack copy above image through 1499px (incl. 948px, 1425px) */
 html[data-layout="wide"] #landing .home-cover > #hero.hero:has(.hero-visual) {
-	grid-template-columns: minmax(0, 1fr);
-	grid-auto-flow: row;
+	display: flex;
+	flex-direction: column;
 	align-items: stretch;
 	min-height: 0;
-	gap: clamp(1.25rem, 3.5vw, 2rem);
+	gap: clamp(0rem, 0vw, 2rem);
 }
 
 html[data-layout="wide"] #landing .hero-left {
 	order: 0;
+	flex: 0 0 auto;
 	position: relative;
 	z-index: 2;
 	min-width: 0;
@@ -685,6 +686,11 @@ html[data-layout="wide"] #landing .hero-left {
 
 html[data-layout="wide"] #landing .hero-visual {
 	order: 1;
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 0;
 	position: relative;
 	z-index: 1;
 	margin-top: 0;
@@ -748,13 +754,19 @@ html[data-layout="wide"] #landing .home-cover > .trust-bar {
 
 @media (min-width: 1500px) {
 	html[data-layout="wide"] #landing .home-cover > #hero.hero:has(.hero-visual) {
+		display: grid;
 		grid-template-columns: minmax(0, 1.38fr) minmax(0, 0.55fr);
 		align-items: center;
 		gap: clamp(2.25rem, 4vw, 4rem);
 		min-height: min(78vh, 820px);
 	}
 
+	html[data-layout="wide"] #landing .hero-left {
+		flex: none;
+	}
+
 	html[data-layout="wide"] #landing .hero-visual {
+		flex: none;
 		justify-content: flex-end;
 		padding-inline: clamp(0.5rem, 1.5vw, 1.25rem) 0;
 		overflow: hidden;
@@ -1051,6 +1063,10 @@ html[data-layout="wide"] .avyaan-landing .cta-row {
 	flex-wrap: wrap;
 	gap: 0.75rem;
 	align-items: center;
+}
+
+html[data-layout="wide"] #landing .hero-left .cta-row {
+	margin-top: calc(clamp(0.25rem, 0.75vh, 0.5rem) + 54px);
 }
 
 html[data-layout="wide"] .avyaan-landing .btn {
@@ -1399,13 +1415,14 @@ html[data-layout="wide"] .avyaan-landing .portfolio-case .case-icons-dual .case-
 		object-fit: contain;
 	}
 
+	/* Keep first-screen viewport fill; shrink hero image instead of collapsing cover */
 	html[data-layout="wide"] #landing .home-cover {
-		min-height: 0;
 		justify-content: flex-start;
 	}
 
 	html[data-layout="wide"] #landing .home-cover > .hero:has(.hero-visual) {
-		flex: 0 1 auto;
+		flex: 1 1 auto;
+		min-height: 0;
 	}
 }
 
