@@ -1066,7 +1066,7 @@ html[data-layout="wide"] .avyaan-landing .cta-row {
 }
 
 html[data-layout="wide"] #landing .hero-left .cta-row {
-	margin-top: clamp(0.25rem, 0.75vh, 0.5rem);
+	margin-top: calc(clamp(0.25rem, 0.75vh, 0.5rem) + 44px);
 }
 
 html[data-layout="wide"] .avyaan-landing .btn {
