@@ -672,7 +672,7 @@ html[data-layout="wide"] #landing .home-cover > #hero.hero:has(.hero-visual) {
 	flex-direction: column;
 	align-items: stretch;
 	min-height: 0;
-	gap: clamp(1.25rem, 3.5vw, 2rem);
+	gap: clamp(0rem, 0vw, 2rem);
 }
 
 html[data-layout="wide"] #landing .hero-left {
@@ -1066,7 +1066,7 @@ html[data-layout="wide"] .avyaan-landing .cta-row {
 }
 
 html[data-layout="wide"] #landing .hero-left .cta-row {
-	margin-top: calc(clamp(0.25rem, 0.75vh, 0.5rem) + 44px);
+	margin-top: calc(clamp(0.25rem, 0.75vh, 0.5rem) + 54px);
 }
 
 html[data-layout="wide"] .avyaan-landing .btn {
